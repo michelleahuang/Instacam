@@ -11,15 +11,15 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Post
     
-    has_many :likes,
-        primary_key: :id, 
-        foreign_key: :user_id,
-        class_name :likes
+    # has_many :likes,
+    #     primary_key: :id, 
+    #     foreign_key: :user_id,
+    #     class_name :likes
     
-    has_many :comments,
-        primary_key: :id, 
-        foreign_key: :user_id, 
-        class_name: :Comments
+    # has_many :comments,
+    #     primary_key: :id, 
+    #     foreign_key: :user_id, 
+    #     class_name: :Comments
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
@@ -46,5 +46,5 @@ class User < ApplicationRecord
     def ensure_session_token
         self.session_token ||= SecureRandom::urlsafe_base64 
     end
-    
+
 end
