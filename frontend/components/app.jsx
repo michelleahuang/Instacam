@@ -1,9 +1,13 @@
 import React from 'react';
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = () => {
     return (
         <div>
-            <h1>Instacam</h1>
+            <header>
+                <h1>Instacam</h1>
+                <NavBarContainer />
+            </header>
         </div>
     )
 }
