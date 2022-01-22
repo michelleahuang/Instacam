@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SessionFormPhonePhoto from '../../../app/assets/images/session_form_phone.png'
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -42,20 +43,19 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Instacam</h1>
-                <h3>{this.props.formType}</h3>
-                <Link to={this.otherLink()}>Other Link</Link>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Username: 
-                        <input type="text" value={this.state.username} onChange={this.update('username')}></input>
-                    </label>
-                    <label>Password: 
-                        <input type="password" value={this.state.password} onChange={this.update('password')}></input>
-                    </label>
-                    <button type="submit">{this.props.formType}</button>
-                </form>
-                {this.renderErrors()}
+            <div id="session-container">
+                <div id="session-box">
+                    <h1>Instacam</h1>
+                    {/* <img id="phone" src={SessionFormPhonePhoto}></img> */}
+                    <h3>{this.props.formType}</h3>
+                    <Link to={this.otherLink()}>Other Link</Link>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" value={this.state.username} placeholder="Username" onChange={this.update('username')}></input>
+                        <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')}></input>
+                        <button type="submit">{this.props.formType}</button>
+                    </form>
+                    {this.renderErrors()}
+                </div>
 
             </div>
         );

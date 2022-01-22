@@ -1,3 +1,19 @@
 // Place all the styles related to the api::sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#session-container {
+    background-color: #fafafa;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#session-box {
+    background-color: rgb(255, 255, 255); 
+    border: 1px solid rgb(219, 219, 219);
+    display: inline-block;
+}
+
