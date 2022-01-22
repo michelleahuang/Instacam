@@ -44,19 +44,32 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div id="session-container">
-                <div id="session-box">
-                    <h1>Instacam</h1>
-                    {/* <img id="phone" src={SessionFormPhonePhoto}></img> */}
-                    <h3>{this.props.formType}</h3>
-                    <Link to={this.otherLink()}>Other Link</Link>
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" value={this.state.username} placeholder="Username" onChange={this.update('username')}></input>
-                        <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')}></input>
-                        <button type="submit">{this.props.formType}</button>
-                    </form>
-                    {this.renderErrors()}
-                </div>
-
+                <section id="session-box">
+                    <div id="session-phone-container">
+                        <img id="session-phone" src={SessionFormPhonePhoto} alt="phone"></img>
+                    </div>
+                    <div id="session-form">
+                        <h1>Instacam</h1>
+                        <form onSubmit={this.handleSubmit}>
+                            <input className="input box" type="text" value={this.state.username} placeholder="Username" onChange={this.update('username')}></input>
+                            <input className="input box" type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')}></input>
+                            <button type="submit">{this.props.formType}</button>
+                            <div id="OR-divider">
+                                <div class="OR-line"></div>
+                                <p>OR</p>
+                                <div class="OR-line"></div>
+                            </div>
+                            <div id="demo">Log in with Demo User</div>
+                        </form>
+                        {this.renderErrors()}
+                        <div id="other-form">
+                            <Link to={this.otherLink()}>Other Link</Link>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <p>Temporary footer content</p>
+                </footer>
             </div>
         );
     }
