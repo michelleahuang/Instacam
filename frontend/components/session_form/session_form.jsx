@@ -71,7 +71,18 @@ class SessionForm extends React.Component {
                     </div>
                 </section>
                 <footer>
-                    <p>Temporary footer content</p>
+                    <ul>
+                        <li id="github">
+                            <a href="https://github.com/michelleahuang" target="_blank">GitHub</a>
+                        </li>
+                        <li id="linkedin">
+                            <a href="https://www.linkedin.com/in/michelleahuang/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li id="angelist">
+                            <a href="#" target="_blank">AngelList</a>
+                        </li>
+                    </ul>
+                    <p>© 2022 Instacam by Michelle Huang</p>
                 </footer>
             </div>
         );

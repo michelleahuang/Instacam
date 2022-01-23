@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // width: 100%;
+    margin-bottom: 50px;
 }
 
 #session-box {
@@ -153,4 +153,24 @@
     font-size: 14px;
     font-weight: 400;
 }
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+footer a, footer p {
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(142, 142, 142);
+}
+
 
