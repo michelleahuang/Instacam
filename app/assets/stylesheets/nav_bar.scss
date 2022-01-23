@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
 }
 
 #nav-bar h1 {
@@ -28,7 +29,7 @@
     cursor: pointer;
 }
 
-.profile-icon {
+.profile-nav-icon {
     border: 1px solid black;
     height: 22px;
     width: 22px;
