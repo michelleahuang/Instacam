@@ -11,6 +11,7 @@ class LoginSessionForm extends React.Component {
             errors: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.loginDemoUser = this.loginDemoUser.bind(this);
     }
 
     handleSubmit(e) {
@@ -34,6 +35,12 @@ class LoginSessionForm extends React.Component {
         }
     }
 
+    loginDemoUser(e) {
+        e.preventDefault();
+        const demoUser = {name: "Demo User", email: "demo_user@demouser.com", username: "demo_user", password: "demouser"};
+        this.props.processForm(demoUser);
+    }
+
     render() {
         return (
             <div id="session-container">
@@ -53,7 +60,7 @@ class LoginSessionForm extends React.Component {
                                     <p>OR</p>
                                     <div className="or"></div>
                                 </div>
-                                <div id="demo">Log in with Demo User</div>
+                                <div id="demo" onClick={this.loginDemoUser}>Log in with Demo User</div>
                             </form>
                             {this.renderErrors()}
                         </div>

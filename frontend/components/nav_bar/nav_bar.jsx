@@ -10,14 +10,13 @@ class NavBar extends React.Component {
         let display = null;
 
         if (this.props.currentUser) {
-            display = <div>
+            display = 
+                <div>
+                    <h1>Instacam</h1>
                     <p>Welcome, {this.props.currentUser.username}</p>
                     <button onClick={this.props.logout}>Logout</button>
                 </div>
         }
-        
-        
-        
         
         
         return (
