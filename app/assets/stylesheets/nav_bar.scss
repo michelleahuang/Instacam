@@ -11,16 +11,26 @@
 #nav-bar h1 {
     font-size: 40px;
     margin-left: 60px;
+    cursor: pointer;
 }
 
-#nav-bar-right {
+#nav-bar-icons {
+    width: 30vw;
     display: flex;
-    width: 25vw;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-right: 60px;
 }
 
+
 .nav-bar-icon {
-    padding: 0px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.profile-icon {
+    border: 1px solid black;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
 }
