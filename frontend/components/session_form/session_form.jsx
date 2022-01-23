@@ -7,7 +7,8 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            errors: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -15,7 +16,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).fail(() => {this.setState({errors: this.props.errors})})
     }
 
     update(field) {
@@ -24,16 +25,16 @@ class SessionForm extends React.Component {
 
     otherLink() {
         if (this.props.formType == 'Sign Up') {
-            return <p>Have an account? <Link to='/login'>Log In</Link></p>;
+            return <p>Have an account? <Link className="other-form-link" to='/login'>Log In</Link></p>;
         } else {
-            return <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>;
+            return <p>Don't have an account? <Link className="other-form-link" to='/signup'>Sign Up</Link></p>;
         }
     }
 
     renderErrors() {
-        if (this.props.errors.length > 0) {
-            return this.props.errors.map((error, index) => {
-                return (<p class="errors" key={index}>{error}</p>)
+        if (this.state.errors.length > 0) {
+            return this.state.errors.map((error, index) => {
+                return (<p className="errors" key={index}>{error}</p>)
             });
         }
         else {
@@ -56,16 +57,16 @@ class SessionForm extends React.Component {
                                 <input className="input-box" type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')}></input>
                                 <button id="form-button" type="submit">{this.props.formType}</button>
                                 <div id="or-divider">
-                                    <div class="or"></div>
+                                    <div className="or"></div>
                                     <p>OR</p>
-                                    <div class="or"></div>
+                                    <div className="or"></div>
                                 </div>
                                 <div id="demo">Log in with Demo User</div>
                             </form>
                             {this.renderErrors()}
                         </div>
                         <div className="panel-box" id="other-form">
-                                {this.otherLink()}
+                            {this.otherLink()}
                         </div>
                     </div>
                 </section>

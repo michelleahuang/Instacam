@@ -14,11 +14,14 @@
 
 #session-wrapper {
     display: flex;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    // width: 100%;
 }
 
 #session-box {
     width: 50%;
+    min-width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -34,7 +37,7 @@
 }
 
 #session-phone-container img {
-    height: 500px;
+    height: 600px;
     width: auto;
 }
 
@@ -42,10 +45,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 35px;
 }
 
 #session-form-container h1 {
     font-size: 60px;
+
 }
 
 #session-form {
@@ -60,13 +65,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .panel-box {
     background-color: rgb(255, 255, 255); 
     border: 1px solid rgb(219, 219, 219);
     padding: 20px 40px;
-    margin: 5px;
+    // width: 350px;
+    width: 250px;
+    margin-left: 25px;
 }
 
 .input-box {
@@ -76,6 +84,7 @@
     background-color: rgb(250, 250, 250);
     border: 1px solid rgb(219, 219, 219);
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 .input-box:focus {
@@ -101,6 +110,7 @@
     display: flex;
     width: 100%;
     align-items: center;
+    margin-top: 10px;
 }
 
 .or {
@@ -122,6 +132,20 @@
     font-weight: 600;
     cursor: pointer;
     margin: 25px 0px;
+}
+
+#other-form {
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.other-form-link {
+    color: rgb(0, 149, 246);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .errors {
