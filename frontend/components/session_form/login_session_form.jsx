@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SessionFormPhonePhoto from '../../../app/assets/images/session_form_phone.png'
 
-class SessionForm extends React.Component {
+class LoginSessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,14 +21,6 @@ class SessionForm extends React.Component {
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value });
-    }
-
-    otherLink() {
-        if (this.props.formType == 'Sign Up') {
-            return <p>Have an account? <Link className="other-form-link" to='/login'>Log In</Link></p>;
-        } else {
-            return <p>Don't have an account? <Link className="other-form-link" to='/signup'>Sign Up</Link></p>;
-        }
     }
 
     renderErrors() {
@@ -66,7 +58,7 @@ class SessionForm extends React.Component {
                             {this.renderErrors()}
                         </div>
                         <div className="panel-box" id="other-form">
-                            {this.otherLink()}
+                            <p>Don't have an account? <Link className="other-form-link" to='/signup'>Sign Up</Link></p>
                         </div>
                     </div>
                 </section>
@@ -89,4 +81,4 @@ class SessionForm extends React.Component {
     }
 }
 
-export default SessionForm;
+export default LoginSessionForm;
