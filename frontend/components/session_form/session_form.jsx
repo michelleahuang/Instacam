@@ -24,16 +24,16 @@ class SessionForm extends React.Component {
 
     otherLink() {
         if (this.props.formType == 'Sign Up') {
-            return '/login';
+            return <p>Have an account? <Link to='/login'>Log In</Link></p>;
         } else {
-            return '/signup';
+            return <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>;
         }
     }
 
     renderErrors() {
         if (this.props.errors.length > 0) {
             return this.props.errors.map((error, index) => {
-                return (<p key={index}>{error}</p>)
+                return (<p class="errors" key={index}>{error}</p>)
             });
         }
         else {
@@ -44,26 +44,28 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div id="session-container">
-                <section id="session-box">
+                <section id="session-wrapper">
                     <div id="session-phone-container">
                         <img id="session-phone" src={SessionFormPhonePhoto} alt="phone"></img>
                     </div>
-                    <div id="session-form">
-                        <h1>Instacam</h1>
-                        <form onSubmit={this.handleSubmit}>
-                            <input className="input box" type="text" value={this.state.username} placeholder="Username" onChange={this.update('username')}></input>
-                            <input className="input box" type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')}></input>
-                            <button type="submit">{this.props.formType}</button>
-                            <div id="OR-divider">
-                                <div class="OR-line"></div>
-                                <p>OR</p>
-                                <div class="OR-line"></div>
-                            </div>
-                            <div id="demo">Log in with Demo User</div>
-                        </form>
-                        {this.renderErrors()}
-                        <div id="other-form">
-                            <Link to={this.otherLink()}>Other Link</Link>
+                    <div id="session-box">
+                        <div className="panel-box" id="session-form-container">
+                            <h1>Instacam</h1>
+                            <form id="session-form" onSubmit={this.handleSubmit}>
+                                <input className="input-box" type="text" value={this.state.username} placeholder="Username" onChange={this.update('username')}></input>
+                                <input className="input-box" type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')}></input>
+                                <button id="form-button" type="submit">{this.props.formType}</button>
+                                <div id="or-divider">
+                                    <div class="or"></div>
+                                    <p>OR</p>
+                                    <div class="or"></div>
+                                </div>
+                                <div id="demo">Log in with Demo User</div>
+                            </form>
+                            {this.renderErrors()}
+                        </div>
+                        <div className="panel-box" id="other-form">
+                                {this.otherLink()}
                         </div>
                     </div>
                 </section>
