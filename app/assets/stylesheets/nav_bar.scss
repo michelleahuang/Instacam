@@ -34,4 +34,57 @@
     height: 22px;
     width: 22px;
     border-radius: 50%;
+    position: relative;
+}
+
+#profile-dropdown {
+    // display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    right: -25px;
+    top: 41px;
+    width: 200px;
+}
+
+.show {
+    display: block;
+}
+
+#profile-dropdown div {
+    padding: 7px 0px 7px 10px;
+}
+
+.dropdown-icon-div {
+    display: flex;
+}
+
+.dropdown-icon-div:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+.dropdown-icon-div p {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.dropdown-icon {
+    padding-right: 10px;
+}
+
+#dropdown-logout {
+    // margin-top: 5px;
+    border-top: 1px solid rgb(219, 219, 219);
+}
+
+#dropdown-logout p {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 0px 5px 0px;
+}
+
+#dropdown-logout:hover {
+    background-color: rgb(250, 250, 250);
 }
