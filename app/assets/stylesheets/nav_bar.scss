@@ -1,0 +1,26 @@
+#nav-bar {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(219, 219, 219);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-bar h1 {
+    font-size: 40px;
+    margin-left: 60px;
+}
+
+#nav-bar-right {
+    display: flex;
+    width: 25vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.nav-bar-icon {
+    padding: 0px 10px;
+}
