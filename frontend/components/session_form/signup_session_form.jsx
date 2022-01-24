@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SessionFormPhonePhoto from '../../../app/assets/images/session_form_phone.png'
 
 class SignupSessionForm extends React.Component {
     constructor(props) {
