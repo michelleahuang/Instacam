@@ -9,12 +9,13 @@ const App = () => {
     return (
         <div>
             <header>
-                <NavBarContainer />
             </header>
 
             <Switch>
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
+                <ProtectedRoute exact path="/" component={NavBarContainer}/> 
+                <Redirect to="/login" />
             </Switch>
         </div>
     )
