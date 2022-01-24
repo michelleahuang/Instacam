@@ -38,7 +38,7 @@ class NavBar extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <p>{this.props.currentUser.username}</p>
+                        <p id="nav-bar-username">{this.props.currentUser.username}</p>
                     </div>
                 </div>
         }
