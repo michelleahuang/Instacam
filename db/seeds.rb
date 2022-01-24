@@ -10,7 +10,7 @@ User.destroy_all
 
 User.create!({name: "Demo User", email: "demo_user@demouser.com", username: "demo_user", password: "demouser"})
 User.create!({name: "Max Huang", email: "max.huang@maxhuang.com", username: "maxhuang88", password: "password"})
-User.create!({name: "Cynthia Huang", email: "cynthiahuang@cymthia.com", username: "cynthiamhuang", password: "password"})
+User.create!({name: "Cynthia Huang", email: "cynthiahuang@cynthia.com", username: "cynthiamhuang", password: "password"})
 User.create!({name: "Angie Lin", email: "angielovesdesserts@dessert.com", username: "dessertsbyangie_", password: "password"})
 User.create!({name: "Aspyn McDonald", email: "aspyn@mcdonald.com", username: "thruaspynslens", password: "password"})
 User.create!({name: "Taylor Swift", email: "taytay@taylorswift.com", username: "taylorswift", password: "password"})
