@@ -37,8 +37,36 @@ class LoginSessionForm extends React.Component {
 
     loginDemoUser(e) {
         e.preventDefault();
-        const demoUser = {username: "demo_user", password: "demouser"};
-        this.props.processForm(demoUser);
+        this.handleDemoUserUsername();
+    }
+
+    handleDemoUserUsername() {
+        let demoUsername = "demo_user".split("");
+        let nextLetters = "";
+        const demoUsernameType = setInterval(() => {
+            if ("demo_user" !== this.state.username) {
+                nextLetters += demoUsername.shift();
+                this.setState({username: nextLetters})
+            } else {
+                clearInterval(demoUsernameType);
+                this.handleDemoUserPassword();
+            }
+        }, 100)
+    }
+
+    handleDemoUserPassword() {
+        let demoPassword = "password".split("");
+        let nextLetters = "";
+        const demoPasswordType = setInterval(() => {
+            if ("password" !== this.state.password) {
+                nextLetters += demoPassword.shift();
+                this.setState({password: nextLetters})
+            } else {
+                clearInterval(demoPasswordType);
+                const demoUser = {username: "demo_user", password: "demouser"};
+                this.props.processForm(demoUser);
+            }
+        }, 100)
     }
 
     render() {
