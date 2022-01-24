@@ -1,0 +1,156 @@
+// Place all the styles related to the api::sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#signup-session-container {
+    background-color: rgb(250, 250, 250);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-session-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+#signup-session-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup-session-form-container h1 {
+    font-size: 60px;
+}
+
+#signup-session-form {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#other-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.panel-box {
+    background-color: rgb(255, 255, 255); 
+    border: 1px solid rgb(219, 219, 219);
+    padding: 20px 40px;
+    // width: 350px;
+    width: 250px;
+    margin-left: 25px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.input-box:focus {
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(142, 142, 142);
+}
+
+#form-button {
+    width: 100%; 
+    margin: 10px 0px;
+    padding: 6px 9px;
+    background-color: rgb(0, 149, 246);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#form-button:active {
+    opacity: 60%;
+}
+
+#or-divider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.or {
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgb(219, 219, 219);
+}
+
+#or-divider p {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(142, 142, 142);
+    margin: 0px 18px;
+}
+
+#demo {
+    font-size: 14px;
+    color: rgb(56, 81, 133);
+    font-weight: 600;
+    cursor: pointer;
+    margin: 25px 0px;
+}
+
+#other-form {
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.other-form-link {
+    color: rgb(0, 149, 246);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.errors {
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+footer a, footer p {
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(142, 142, 142);
+}
+
+
