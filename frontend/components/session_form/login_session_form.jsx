@@ -74,7 +74,7 @@ class LoginSessionForm extends React.Component {
             <div id="session-container">
                 <section id="session-wrapper">
                     <div id="session-phone-container">
-                        <img id="session-phone" src={SessionFormPhonePhoto} alt="phone"></img>
+                        <img id="session-phone" src={sessionPhoneURL} alt="phone"></img>
                     </div>
                     <div id="session-box">
                         <div className="panel-box" id="session-form-container">
