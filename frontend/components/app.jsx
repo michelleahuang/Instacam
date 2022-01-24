@@ -14,7 +14,12 @@ const App = () => {
             <Switch>
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
-                <ProtectedRoute exact path="/" component={NavBarContainer}/> 
+                <ProtectedRoute exact path="/users/:userId" /> {/* User Show/Profile Container */}
+                <ProtectedRoute exact path="/posts/:postId" /> {/* Post Show Container */}
+                <ProtectedRoute exact path="/posts/new" />  {/* Post Create Form Container */}
+                <ProtectedRoute exact path="/posts/:postId/edit" /> {/* Post Edit Form Container */}
+
+                <ProtectedRoute exact path="/" component={NavBarContainer}/>  {/* Post Index Container */}
                 <Redirect to="/login" />
             </Switch>
         </div>
