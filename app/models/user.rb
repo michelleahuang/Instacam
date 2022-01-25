@@ -20,6 +20,8 @@ class User < ApplicationRecord
         primary_key: :id, 
         foreign_key: :user_id, 
         class_name: :Comment
+    
+    has_one_attached :avatar
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)

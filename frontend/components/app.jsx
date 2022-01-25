@@ -4,11 +4,13 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import Modal from './modal/modal';
 
 const App = () => {
     return (
         <div>
             <header>
+                <Modal />
             </header>
 
             <Switch>
