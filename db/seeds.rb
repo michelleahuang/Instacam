@@ -8,12 +8,12 @@
 
 User.destroy_all
 
-User.create!({name: "Demo User", email: "demo_user@demouser.com", username: "demo_user", password: "demouser"})
-User.create!({name: "Max Huang", email: "max.huang@maxhuang.com", username: "maxhuang88", password: "password"})
-User.create!({name: "Cynthia Huang", email: "cynthiahuang@cynthia.com", username: "cynthiamhuang", password: "password"})
-User.create!({name: "Angie Lin", email: "angielovesdesserts@dessert.com", username: "dessertsbyangie_", password: "password"})
-User.create!({name: "Aspyn McDonald", email: "aspyn@mcdonald.com", username: "thruaspynslens", password: "password"})
-User.create!({name: "Taylor Swift", email: "taytay@taylorswift.com", username: "taylorswift", password: "password"})
-User.create!({name: "Hilary Duff", email: "hilary@hilaryduff.com", username: "hilaryduff", password: "password"})
-User.create!({name: "Simu Liu", email: "simuliu@email.com", username: "simu.liu", password: "password"})
+demo = User.create!({name: "Demo User", email: "demo_user@demouser.com", username: "demo_user", password: "demouser"})
+max = User.create!({name: "Max Huang", email: "max.huang@maxhuang.com", username: "maxhuang88", password: "password"})
+cynthia = User.create!({name: "Cynthia Huang", email: "cynthiahuang@cynthia.com", username: "cynthiastummy", password: "password"})
+josh = User.create!({name: "Josh Williams", email: "joshwilliams@email.com", username: "joshmwilliams", password: "password"})
+aspyn = User.create!({name: "Aspyn McDonald", email: "aspynlovesdesserts@dessert.com", username: "dessertsbyaspyn_", password: "password"})
+taylor = User.create!({name: "Taylor Swift", email: "taytay@taylorswift.com", username: "taylorswift", password: "password"})
+hilary = User.create!({name: "Hilary Duff", email: "hilary@hilaryduff.com", username: "hilaryduff", password: "password"})
+simu = User.create!({name: "Simu Liu", email: "simuliu@email.com", username: "simu.liu", password: "password"})
 
