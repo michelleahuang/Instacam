@@ -9,11 +9,12 @@ class Api::PostsController < ApplicationController
 
     def create 
         @post = Post.new(post_params)
+        @post.user_id = current_user.id
 
         if @post.save  
             render :show
         else  
-            render json: @post.errors.full_messages, status: 401
+            render json: @post.errors.full_messages, status: 422
         end
     end 
 
@@ -34,7 +35,8 @@ class Api::PostsController < ApplicationController
             @post.update(post_params) 
             render :show 
         else  
-            render json: @post.errors.full_messages, status: 401
+            # render json: @post.errors.full_messages, status: 422
+            render json: ["You cannot update another user's posts"], status: 422
         end 
     end 
 
@@ -43,9 +45,8 @@ class Api::PostsController < ApplicationController
 
         if @post && current_user.id == @post.user_id 
             @post.destroy 
-            render json: ["Post was successfully deleted"]
         else  
-            render json: @post.errors.full_messages, status: 422
+            render json: ["You cannot delete another user's posts"], status: 422
         end
     end 
 
