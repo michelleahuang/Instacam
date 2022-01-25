@@ -29,7 +29,7 @@ class Api::PostsController < ApplicationController
     def update 
         @post = Post.find_by(id: params[:id])
 
-        if @post && current_user.id == @post.user_id 
+        if @post && (current_user.id == @post.user_id) 
             @post.update(post_params) 
             render :show 
         else  
@@ -40,7 +40,7 @@ class Api::PostsController < ApplicationController
     def destroy 
         @post = Post.find_by(id: params[:id])
 
-        if @post && current_user.id == @post.user_id 
+        if @post && (current_user.id == @post.user_id)
             @post.destroy 
         else  
             render json: ["You cannot delete another user's posts"], status: 422
