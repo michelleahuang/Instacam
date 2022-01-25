@@ -33,7 +33,6 @@ class Api::PostsController < ApplicationController
             @post.update(post_params) 
             render :show 
         else  
-            # render json: @post.errors.full_messages, status: 422
             render json: ["You cannot update another user's posts"], status: 422
         end 
     end 

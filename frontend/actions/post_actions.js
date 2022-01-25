@@ -33,4 +33,33 @@ const receiveErrors = (errors) => {
     };
 }
 
-export const 
+export const fetchAllPosts = () => (dispatch) => {
+    return PostApiUtil.fetchAllPosts()
+        .then(posts => dispatch(receiveAllPosts(posts)),
+            errors => dispatch(receiveErrors(errors.responseJSON)));
+}
+
+export const fetchPost = (postId) => (dispatch) => {
+    return PostApiUtil.fetchPost(postId)
+        .then(post => dispatch(receivePost(post)),
+            errors => dispatch(receiveErrors(errors.responseJSON)));
+}
+
+export const createPost = (post) => (dispatch) => {
+    return PostApiUtil.createPost(post)
+        .then(post => dispatch(receivePost(post)),
+            errors => dispatch(receiveErrors(errors.responseJSON)));
+}
+
+export const updatePost = (post) => (dispatch) => {
+    return PostApiUtil.updatePost(post)
+        .then(post => dispatch(receivePost(post)),
+            errors => dispatch(receiveErrors(errors.responseJSON)));
+}
+
+export const deletePost = (postId) => (dispatch) => {
+    return PostApiUtil.deletePost(postId)
+        .then(() => dispatch(removePost(postId)),
+            errors => dispatch(receiveErrors(errors.responseJSON)));
+}
+
