@@ -41,7 +41,7 @@ taylor.avatar.attach(io: taylor_avatar, filename: 'taylor.jpg')
 taylor.save
 
 hilary = User.new({name: "Hilary Duff", email: "hilary@hilaryduff.com", username: "hilaryduff", password: "password"})
-hilary_avatar = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/hilary.jpg')
+hilary_avatar = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/hilaryDuff.jpg')
 hilary.avatar.attach(io: hilary_avatar, filename: 'hilary.jpg')
 hilary.save
 
@@ -119,8 +119,11 @@ hilary_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/
 hilary_post1.photo.attach(io: hilary_post1_photo, filename: 'coffeeAndBook.jpg')
 hilary_post1.save
 
-hilary_post2 = 
+hilary_post2 = Post.new({user_id: hilary.id, caption: "Reminds me of my Lizzie McGuire days.."})
+hilary_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/disney.jpg')
+hilary_post2.photo.attach(io: hilary_post2_photo, filename: 'disney.jpg')
+hilary_post2.save
 
 
-simu_post1 = 
-simu_post2 = 
+# simu_post1 = 
+# simu_post2 = 
