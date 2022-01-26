@@ -18,6 +18,7 @@ class NavBar extends React.Component {
 
         if (this.props.currentUser) {
             display = 
+            <div id="nav-bar-container">
                 <div id="nav-bar">
                     <Link to="/" id="nav-bar-h1">Instacam</Link>
                     <div id="nav-bar-icons">
@@ -40,12 +41,11 @@ class NavBar extends React.Component {
                         </div>
                         {/* <p id="nav-bar-username">{this.props.currentUser.username}</p> */}
                 </div>
+            </div>
         }
         
         return (
-            <div id="nav-bar-container">
-                {display}
-            </div>
+            display
         )
     }
 }

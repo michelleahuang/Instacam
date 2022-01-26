@@ -1,3 +1,55 @@
 // Place all the styles related to the api::posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main-posts-body-container {
+    width: 100vw;
+    height: 100vw;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-posts-container {
+    width: 70%;
+    display: flex;
+    border: 1px solid black;
+    margin-left: 40px;
+    margin-right: 60px;
+    max-width: 1000px;
+
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    // border: 1px solid black;
+    padding-top: 30px;
+}
+
+#stories-container {
+    width: 100%;
+    height: 118px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    background-color: white;
+}
+
+#posts-body-container {
+    // border: 1px solid black;
+}
+
+
+.post-photo {
+    width: 100px;
+    height: auto;
+}
+
+#right-side {
+    width: 30%;
+    border: 1px solid black;
+    padding-top: 30px;
+
+}

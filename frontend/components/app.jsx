@@ -12,6 +12,7 @@ const App = () => {
         <div>
             <header>
                 <Modal />
+                <NavBarContainer />
             </header>
 
             <Switch>
