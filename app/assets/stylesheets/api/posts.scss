@@ -58,6 +58,9 @@
     width: 32px;
     border-radius: 50%;
     margin: 0px 10px;
+    object-fit: cover;
+    max-height: 32px;
+    max-width: 32px;
 }
 
 #post-username {
@@ -80,7 +83,9 @@
 .post-photo {
     width: 100%;
     height: auto;
+    max-height: 600px;
     margin-bottom: 25px;
+    object-fit: cover;
 }
 
 #right-side {
