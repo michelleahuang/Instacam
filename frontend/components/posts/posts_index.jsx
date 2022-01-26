@@ -13,22 +13,22 @@ class PostsIndex extends React.Component {
 
     render() {
         return (
-            <div>
                 <div id="main-posts-body-container">
                     <div id="main-posts-container">
                         <div id="left-side">
                             <div id="stories-container"> 
                             </div>
-                            <ul id="posts-body-container">
-                                {this.props.posts.map(post => <PostIndexItem key={post.id} post={post} /> )}
-                            </ul>
+                            <div id="posts-body-container">
+                                <ul id="entire-post">
+                                    {this.props.posts.map(post => <PostIndexItem key={post.id} post={post} /> )}
+                                </ul>
+                            </div>
                         </div>
                         <div id="right-side">
 
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }
