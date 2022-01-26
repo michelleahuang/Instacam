@@ -11,17 +11,25 @@ function Modal({modal, closeModal}) {
     switch (modal) {
         
     }
+
+    return (
+        <div className="modal-background" onClick={closeModal}>
+            <div className="modal-child" onClick={e => e.stopPropagation()}>
+                { component }
+            </div>
+        </div>
+    );
 }
 
 const mapStateToProps = (state) => {
     return {
-
+        modal: state.ui.modal
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        closeModal: () => dispatch(closeModal())
     };
 };
 

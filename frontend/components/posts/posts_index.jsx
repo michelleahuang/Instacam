@@ -12,6 +12,8 @@ class PostsIndex extends React.Component {
     }
 
     render() {
+        if (!this.props.posts) return null;
+        
         return (
                 <div id="main-posts-body-container">
                     <div id="main-posts-container">
