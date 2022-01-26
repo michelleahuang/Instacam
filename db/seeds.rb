@@ -53,12 +53,12 @@ simu.save
 Post.destroy_all
 
 demo_post1 = Post.new({user_id: demo.id, caption: "LA sunsets are unreal..."})
-demo_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/laSunsets.jpg')
-demo_post1.photo.attach(io: demo_post1_photo, filename: 'sunsets.jpg')
+demo_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/laSunset.jpg')
+demo_post1.photo.attach(io: demo_post1_photo, filename: 'sunset.jpg')
 demo_post1.save 
 
 demo_post2 = Post.new({user_id: demo.id, caption: "The cutest pup ever! Puppy's first time in the snow :)"})
-demo_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/puppyInSnow.jpg')
+demo_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/puppy.jpg')
 demo_post2.photo.attach(io: demo_post2_photo, filename: 'puppy.jpg')
 demo_post2.save
 
@@ -83,18 +83,18 @@ cynthia_post2.photo.attach(io: cynthia_post2_photo, filename: 'chicken.jpg')
 cynthia_post2.save
 
 josh_post1 = Post.new({user_id: josh.id, caption: "Desk setup for 2022"})
-josh_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/deskSetup.jpg')
+josh_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/desk.jpg')
 josh_post1.photo.attach(io: josh_post1_photo, filename: 'desk.jpg')
 josh_post1.save
 
 
 josh_post2 = Post.new({user_id: josh.id, caption: "My Sunday view"})
-josh_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/coffeeShop.jpg')
-josh_post2.photo.attach(io: josh_post2_photo, filename: 'coffeeShop.jpg')
+josh_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/cafeShop.jpg')
+josh_post2.photo.attach(io: josh_post2_photo, filename: 'cafe.jpg')
 josh_post2.save
 
 aspyn_post1 = Post.new({user_id: aspyn.id, caption: "Anyone care for some freshly baked red velvet cookies?"})
-aspyn_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/cookies.jpg')
+aspyn_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/redVelvetCookies.jpg')
 aspyn_post1.photo.attach(io: aspyn_post1_photo, filename: 'cookies.jpg')
 aspyn_post1.save
 
@@ -109,13 +109,13 @@ taylor_post1.photo.attach(io: taylor_post1_photo, filename: 'concert.jpg')
 taylor_post1.save
 
 taylor_post2 = Post.new({user_id: taylor.id, caption: "I'll be back Florida!"})
-taylor_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/airplane.jpg')
+taylor_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/airplaneView.jpg')
 taylor_post2.photo.attach(io: taylor_post2_photo, filename: 'airplane.jpg')
 taylor_post2.save
 
 
 hilary_post1 = Post.new({user_id: hilary.id, caption: "A cozy Sunday morning in with the kids"})
-hilary_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/coffeeAndBook.jpg')
+hilary_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/coffeeBookLayout.jpg')
 hilary_post1.photo.attach(io: hilary_post1_photo, filename: 'coffeeAndBook.jpg')
 hilary_post1.save
 
