@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import PostForm from './create_post_form';
+import CreatePostForm from './create_post_form';
 import { createPost } from '../../actions/post_actions';
 import { openModal, closeModal} from '../../actions/modal_actions';
 
@@ -18,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostForm);
+export default connect(mapStateToProps, mapDispatchToProps)(CreatePostForm);
