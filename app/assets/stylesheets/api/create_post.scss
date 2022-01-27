@@ -38,13 +38,15 @@
 
 #share-text {
     color: #0095f6;
+    background-color: white;
+    border: none;
     font-weight: 600;
     font-size: 14px;
     margin-right: 20px;
     cursor: pointer;
 }
 
-#create-post-form-body {
+#post-form {
     height: 100%;
     position: relative;
     display: flex;
@@ -74,6 +76,10 @@
     cursor: pointer;
 }
 
+#file-input-button {
+    display: none;
+}
+
 #form-right-side {
     display: flex;
     flex-direction: column;
@@ -100,6 +106,8 @@
     font-family: 'Roboto', sans-serif;
     border: none;
     resize: none;
+    margin-left: 5px;
+    color: rgb(38, 38, 38);
 }
 
 #caption-input:focus{
