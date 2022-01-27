@@ -84,7 +84,7 @@ class CreatePostForm extends React.Component {
                 <div id="create-post-form-container">
                     <div id="create-post-form">
                         <div id="create-post-form-header">
-                            <p id="dummy-text">X</p>
+                            <p id="dummy-text">Share</p>
                             <p id="create-text">Create new post</p>
                             <button id="share-text" form="post-form">Share</button>
                         </div>

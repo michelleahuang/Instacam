@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import CreatePostFormContainer from '../posts/create_post_form_container';
+import DeleteShowPostModal from '../posts/delete_show_post';
 
 function Modal({modal, closeModal}) {
     if (!modal) {
@@ -12,6 +13,12 @@ function Modal({modal, closeModal}) {
     switch (modal) {
         case 'create_post':
             component = <CreatePostFormContainer />
+            break;
+        case 'delete_and_show':
+            component = <DeleteShowPostModal />
+            break;
+        default:
+            return null;
     }
 
     return (

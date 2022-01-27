@@ -4,13 +4,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -20px;
 }
 
 #create-post-form {
     background-color: white;
     border: 1px solid black;
     width: 70%;
-    height: 70%;
+    height: 80%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@
 
 #dummy-text {
     color: white;
+    margin-left: 20px;
 }
 
 #create-text {
@@ -124,8 +126,8 @@
 
 #form-close-button {
     display: flex;
-    margin-top: 35px;
+    margin-top: 40px;
     justify-content: end;
-    margin-right: 10px;
+    margin-right: 15px;
     cursor: pointer;
 }
