@@ -15,10 +15,7 @@ class PostShow extends React.Component {
         return (
             <div id="post-show-page">
                 <div id="post-show-container">
-                    <div id="testing">
-
                     <img id="individual-post-photo" src={this.props.post.photoUrl}></img>
-                    </div>
                     <div id="post-photo-right-container">
                         <div id="post-photo-right-side">
                             <div id="right-side-header">
