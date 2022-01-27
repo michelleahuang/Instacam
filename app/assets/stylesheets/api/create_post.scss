@@ -121,3 +121,11 @@
 #caption-input:focus{
     outline: none;
 }
+
+#form-close-button {
+    display: flex;
+    margin-top: 35px;
+    justify-content: end;
+    margin-right: 10px;
+    cursor: pointer;
+}
