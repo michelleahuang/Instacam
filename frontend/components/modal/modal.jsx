@@ -10,7 +10,7 @@ function Modal({modal, closeModal}) {
     }
 
     let component;
-    switch (modal) {
+    switch (modal) {        
         case 'create_post':
             component = <CreatePostFormContainer />
             break;
@@ -31,6 +31,16 @@ function Modal({modal, closeModal}) {
 }
 
 const mapStateToProps = (state) => {
+        
+    if (state.ui.modal) {
+        if (state.ui.modal.postId) {
+            return {
+                modal: state.ui.modal.type,
+                postId: state.ui.modal.postId
+            };
+        }
+    }
+
     return {
         modal: state.ui.modal
     };

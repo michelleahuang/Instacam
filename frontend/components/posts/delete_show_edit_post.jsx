@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 
 class DeleteShowEditPostModal extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.handleShow = this.handleShow.bind(this)
+        this.handleShow = this.handleShow.bind(this)
     }
 
-    // handleShow {
-    //     <Redirect to= />
-    // }
+    handleShow(e) {
+        this.props.history.push(`/posts/${this.props.postId}`);
+        this.props.closeModal();
+    }
 
 
 
@@ -26,9 +27,9 @@ class DeleteShowEditPostModal extends React.Component {
 
                 </button>
 
-                <button id="delete-show-edit-option-show" className="delete-show-edit-modal-category">Go to post
-
+                <button onClick={this.handleShow} id="delete-show-edit-option-show" className="delete-show-edit-modal-category">Go to post
                 </button>
+
                 {/* <Link id="delete-show-edit-option-show" className="delete-show-edit-modal-category" to={`/posts/`}>
                     Go to post
                 </Link> */}
@@ -39,4 +40,4 @@ class DeleteShowEditPostModal extends React.Component {
     }
 }
 
-export default DeleteShowEditPostModal;
+export default withRouter(DeleteShowEditPostModal);

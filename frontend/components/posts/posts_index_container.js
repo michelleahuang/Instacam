@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchAllPosts: () => dispatch(fetchAllPosts()),
-        openModal: modal => dispatch(openModal(modal))
+        openModal: (modal, postId) => dispatch(openModal(modal, postId))
     };
 }
 
