@@ -7,9 +7,8 @@
     height: 25vh;
     max-width: 250x;
     max-height: 300px;
-    background-color: white;
-    border-radius: 12px;
     position: relative;
+    border-radius: 12px;
 }
 
 .delete-show-edit-modal-category {
@@ -21,10 +20,29 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 400;
+    background-color: white;
+    box-sizing: border-box;
+    border: none;
+    
 }
 
 #delete-show-edit-option-delete, #delete-show-edit-option-edit, #delete-show-edit-option-show {
     border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.delete-show-edit-modal-category {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+}
+
+#delete-show-edit-option-delete {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#delete-show-edit-option-cancel {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 
