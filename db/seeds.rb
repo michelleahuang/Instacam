@@ -30,7 +30,7 @@ josh_avatar = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/josh.jp
 josh.avatar.attach(io: josh_avatar, filename: 'josh.jpg')
 josh.save
 
-aspyn = User.new({name: "Aspyn McDonald", email: "aspynlovesdesserts@dessert.com", username: "dessertsbyaspyn_", password: "password"})
+aspyn = User.new({name: "Aspyn McDonald", email: "aspynlovesdesserts@dessert.com", username: "bakedbyaspyn", password: "password"})
 aspyn_avatar = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/aspyn.jpg')
 aspyn.avatar.attach(io: aspyn_avatar, filename: 'aspyn.jpg')
 aspyn.save
