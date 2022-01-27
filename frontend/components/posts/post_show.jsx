@@ -9,6 +9,12 @@ class PostShow extends React.Component {
         this.props.fetchPost(this.props.match.params.postId)
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.postId !== prevProps.match.params.postId) {
+            this.componentDidMount()
+        }
+    }
+
     render() {
         if (!this.props.post) return null;
 
