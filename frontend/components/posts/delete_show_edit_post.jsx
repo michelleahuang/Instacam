@@ -3,7 +3,13 @@ import React from 'react';
 class DeleteShowEditPostModal extends React.Component {
     constructor(props) {
         super(props);
+        this.handleShow = this.handleShow.bind(this);
     }
+
+    // handleShow(e) {
+    //     <Link to="/posts/:postId"></Link>
+    // }
+
 
     render() {
         return (
