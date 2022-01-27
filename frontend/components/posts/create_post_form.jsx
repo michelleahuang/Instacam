@@ -4,16 +4,24 @@ import React from 'react'
 class PostForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            user_id: this.props.currentUser,
+            caption: ''
+        }
     }
 
     render() {
         return (
             <div>
-                <h2>Create a New Post</h2>
-                <form>
-                </form>
+                <p>Create new post</p>
+                <div>
+                    <form>
+                    </form>
+                </div>
             </div>
                 
         )
     }
 }
+
+export default PostForm;

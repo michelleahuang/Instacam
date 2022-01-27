@@ -1,0 +1,54 @@
+#post-show-page {
+    display: flex;
+    max-width: 850px;
+    width: 70%;
+    height: 50%;
+    justify-content: center;
+    margin: auto auto;
+    margin-top: 90px;
+    border-radius: 3px;
+}
+
+#post-show-container {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+
+#individual-post-photo {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+#post-photo-right-container {
+    width: 300px;
+
+}
+
+#post-photo-right-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#right-side-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    padding: 15px 0px;
+}
+
+#period {
+    padding: 0px 2px;
+    margin-right: 5px;
+}
+
+#right-side-header p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: rgb(38, 38, 38);
+}

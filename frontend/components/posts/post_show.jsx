@@ -6,6 +6,7 @@ class PostShow extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         this.props.fetchPost(this.props.match.params.postId)
     }
 
