@@ -8,13 +8,13 @@ class DeleteShowPostModal extends React.Component {
     render() {
         return (
             <div id="delete-show-modal-container">
-                <div>
+                <div id="delete-show-option-delete" className="delete-show-modal-category">Delete
             
                 </div>
-                <div>
+                <div id="delete-show-option-show" className="delete-show-modal-category">Go to post
 
                 </div>
-                <div></div>
+                <div id="delete-show-option-cancel" className="delete-show-modal-category" onClick={this.props.closeModal}>Cancel</div>
 
             </div>
         );
