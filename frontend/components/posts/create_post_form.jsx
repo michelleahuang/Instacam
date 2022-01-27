@@ -31,6 +31,16 @@ class CreatePostForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        const formData = new FormData();
+        formData.append('post[caption]', this.state.caption);
+        formData.append('post[photo]', this.state.photoFile);
+        $.ajax({
+            method: 'POST',
+            url: `/api/posts`,
+            data: formData,
+            contentType: false,
+            processData: false
+        });
     }
 
     render() {
