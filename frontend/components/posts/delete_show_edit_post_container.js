@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import DeleteShowPostModal from './delete_show_post';
+import DeleteShowEditPostModal from './delete_show_edit_post';
 import { deletePost } from '../../actions/post_actions';
 import { openModal, closeModal} from '../../actions/modal_actions';
 
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DeleteShowPostModal);
+export default connect(mapStateToProps, mapDispatchToProps)(DeleteShowEditPostModal);
