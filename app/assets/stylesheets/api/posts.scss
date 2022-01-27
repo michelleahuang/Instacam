@@ -1,0 +1,99 @@
+// Place all the styles related to the api::posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main-posts-body-container {
+    width: 100vw;
+    height: 100vw;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-posts-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    max-width: 1000px;
+
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-right: 25px;
+    max-width: 700px;
+}
+
+#stories-container {
+    width: 100%;
+    height: 110px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    background-color: white;
+}
+
+#posts-body-container {
+    margin-top: 25px;
+}
+
+#post-header {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.post-profile-icon {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin: 0px 10px;
+    object-fit: cover;
+    max-height: 32px;
+    max-width: 32px;
+    cursor: pointer;
+}
+
+#post-username {
+    color: rgb(38, 38, 38);
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#post-header-left {
+    display: flex; 
+    align-items: center;
+}
+
+#post-header-right {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.post-photo {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    margin-bottom: 25px;
+    object-fit: cover;
+}
+
+#right-side {
+    width: 30%;
+    border: 1px solid blue;
+    padding-top: 30px;
+    max-width: 300px;
+}
+
+
