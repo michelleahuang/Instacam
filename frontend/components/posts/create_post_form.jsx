@@ -1,4 +1,6 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom';
+
 
 class CreatePostForm extends React.Component {
     constructor(props) {
@@ -7,8 +9,7 @@ class CreatePostForm extends React.Component {
             user_id: this.props.currentUser.id,
             caption: '',
             photoFile: null,
-            photoUrl: null,
-            counter: 0
+            photoUrl: null
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -46,17 +47,20 @@ class CreatePostForm extends React.Component {
             formData.append('post[photo]', this.state.photoFile)
         };
         // debugger;
-        $.ajax({
-            method: 'POST',
-            url: `/api/posts`,
-            data: formData,
-            contentType: false,
-            processData: false
-        }).then(this.setState({counter: this.state.counter + 1}))
+        // $.ajax({
+        //     method: 'POST',
+        //     url: `/api/posts`,
+        //     data: formData,
+        //     contentType: false,
+        //     processData: false
+        // }).then(() => this.props.location.reload())
+
+        this.props.createPost(formData).then(() => this.props.history.push('/'));
+
+            // () => this.props.history.push('/'))
 
         // this.setState({counter: this.state.counter + 1});
         // .then(this.props.fetchAllPosts());
-
         this.props.closeModal();
     }
 
@@ -74,8 +78,6 @@ class CreatePostForm extends React.Component {
     // }
 
     render() {
-        console.log(this.state.counter);
-
         let preview;
 
         if (this.state.photoUrl) {
@@ -126,4 +128,4 @@ class CreatePostForm extends React.Component {
     }
 }
 
-export default CreatePostForm;
+export default withRouter(CreatePostForm);
