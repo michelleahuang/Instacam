@@ -10,8 +10,6 @@ function Modal({modal, postId, closeModal}) {
         return null;
     }
 
-    console.log(postId);
-
     let component;
     switch (modal) {        
         case 'create_post':
@@ -21,7 +19,6 @@ function Modal({modal, postId, closeModal}) {
             component = <DeleteShowEditPostModalContainer />
             break;
         case 'edit_post':
-            debugger
             component = <EditPostFormContainer postId={postId} />
             break;
         default:
@@ -41,7 +38,6 @@ const mapStateToProps = (state) => {
         
     if (state.ui.modal) {
         if (state.ui.modal.postId) {
-            debugger
             return {
                 modal: state.ui.modal.type,
                 postId: state.ui.modal.postId

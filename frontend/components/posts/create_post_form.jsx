@@ -52,14 +52,9 @@ class CreatePostForm extends React.Component {
             data: formData,
             contentType: false,
             processData: false
-        });
+        }).then(this.props.fetchAllPosts());
 
         this.props.closeModal();
-    }
-
-    componentDidUpdate(prevProps) {
-        // if post number is different from before, need to fetchallposts again
-        //prevProps (if they're not the same as ownProps)
     }
 
     render() {
