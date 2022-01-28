@@ -59,11 +59,9 @@ class CreatePostForm extends React.Component {
     }
 
     renderErrors() {
-        console.log("render errors");
-        console.log(this.props.errors.length > 0)
         if (this.props.errors.length) {
             return this.props.errors.map((error, index) => {
-                return (<p className="errors" key={index}>{error}</p>)
+                return (<p id="create-post-errors" className="errors" key={index}>{error}</p>)
             });
         }
     }
