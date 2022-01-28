@@ -1,3 +1,89 @@
 // Place all the styles related to the api::users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#user-show-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 60px;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+    // border: 1px solid red;
+}
+
+#user-show-header {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    color: #262626;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+#user-avatar-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-show-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#user-header-right {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header-username {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+#user-header-stats {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+#user-header-stats span {
+    font-weight: 600;
+}
+
+#header-full-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#posts-divider {
+    display: flex;
+    border-top: 1px solid #262626;
+    color: #262626;
+    justify-content: center;
+    align-items: center;
+}
+
+#posts-divider-icon, #posts-divider-text {
+    margin: 15px 5px 20px 5px;
+}
+
+#posts-divider-text {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
