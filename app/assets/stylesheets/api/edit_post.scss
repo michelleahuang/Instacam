@@ -27,16 +27,18 @@
     border-bottom: 1px solid rgb(219, 219, 219);
 }
 
-#dummy-text {
-    color: white;
+#edit-dummy-text {
+    color: rgb(38, 38, 38);
     margin-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 #create-text {
     color: rgb(38, 38, 38);
     font-weight: 600;
     font-size: 16px;
-
 }
 
 #share-text {
@@ -124,8 +126,6 @@
     resize: none;
     margin-left: 5px;
     color: rgb(38, 38, 38);
-    width: 80%;
-    height: 40px;
 }
 
 #caption-input:focus{
@@ -138,8 +138,4 @@
     justify-content: end;
     margin-right: 15px;
     cursor: pointer;
-}
-
-#create-post-errors {
-    margin-top: 5px;
 }

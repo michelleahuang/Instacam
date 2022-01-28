@@ -1,6 +1,6 @@
 #post-show-page {
     display: flex;
-    max-width: 850px;
+    max-width: 900px;
     width: 70%;
     height: 50%;
     justify-content: center;
@@ -17,7 +17,7 @@
 
 
 #individual-post-photo {
-    width: 70%;
+    width: calc(100% - 300px);
     height: auto;
     object-fit: contain;
 }
@@ -29,7 +29,7 @@
 #post-photo-right-side {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 300px;
 }
 
 #right-side-header {

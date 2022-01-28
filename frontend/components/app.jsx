@@ -5,6 +5,8 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import PostsIndexContainer from './posts/posts_index_container';
 import PostShowContainer from './posts/post_show_container'
 import CreatePostFormContainer from './posts/create_post_form_container';
+import EditPostFormContainer from './posts/edit_post_form_container';
+import UserShowContainer from './user/user_show_container'
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import Modal from './modal/modal';
@@ -21,9 +23,8 @@ const App = () => {
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
-                <ProtectedRoute exact path="/users/:userId" /> {/* User Show/Profile Container */}
+                <ProtectedRoute exact path="/users/:userId" component={UserShowContainer}/> 
                 <ProtectedRoute exact path="/posts/:postId" component={PostShowContainer}/> 
-                <ProtectedRoute exact path="/posts/:postId/edit" /> {/* Post Edit Form Container */}
                 <ProtectedRoute exact path="/" component={PostsIndexContainer}/>  
                 
                 <Redirect to="/login" />
