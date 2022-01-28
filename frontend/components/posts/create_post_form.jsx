@@ -9,12 +9,14 @@ class CreatePostForm extends React.Component {
             user_id: this.props.currentUser.id,
             caption: '',
             photoFile: null,
-            photoUrl: null
+            photoUrl: null,
+            errors: []
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleFile = this.handleFile.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     handleInput(e) {
@@ -47,12 +49,29 @@ class CreatePostForm extends React.Component {
             formData.append('post[photo]', this.state.photoFile)
         };
 
-        this.props.createPost(formData).then(() => this.props.history.push('/'));
+        this.props.createPost(formData).then(() => this.props.history.replace('/'))
+        
+        // .fail(() => {this.setState({errors: this.props.errors})});
 
+        this.renderErrors();
         // this.props.createPost(formData).then(() => location.reload());
+
 
         this.props.closeModal();
     }
+
+    renderErrors() {
+        if (this.state.errors.length > 0) {
+            return this.state.errors.map((error, index) => {
+                return (<p className="errors" key={index}>{error}</p>)
+            });
+        }
+        else {
+            return null;
+            this.props.closeModal()
+        }
+    }
+
 
 
     render() {
