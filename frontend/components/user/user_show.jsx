@@ -6,7 +6,14 @@ class UserShow extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         this.props.fetchUser(this.props.match.params.userId)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.userId !== prevProps.match.params.userId) {
+            this.componentDidMount()
+        }
     }
 
     render() {
@@ -16,6 +23,9 @@ class UserShow extends React.Component {
         // posts = this.props.user.posts.length;
 
         console.log(this.props.users)
+        console.log
+
+        if (!this.props.user) return null;
 
         return (
             <div id="user-show-page">
