@@ -24,13 +24,26 @@ class DeleteShowEditPostModal extends React.Component {
 
 
     render() {
+        let editButton;
+        let deleteButton;
+
+        if (this.props.post.userId === this.props.currentUser.id) {
+            editButton = <button onClick={this.handleEdit} id="delete-show-edit-option-edit" className="delete-show-edit-modal-category">Edit</button>
+        } else {
+            editButton = <button disabled onClick={this.handleEdit} id="delete-show-edit-option-edit-disabled" className="delete-show-edit-modal-category">Edit</button>
+        }
+
+        if (this.props.post.userId === this.props.currentUser.id) {
+            deleteButton = <button id="delete-show-edit-option-delete" className="delete-show-edit-modal-category">Delete</button>
+        } else {
+            deleteButton = <button id="delete-show-edit-option-delete-disabled" className="delete-show-edit-modal-category">Delete</button>
+        }
+
+
         return (
             <div id="delete-show-edit-modal-container">
-                <button id="delete-show-edit-option-delete" className="delete-show-edit-modal-category">Delete
-            
-                </button>
-
-                <button onClick={this.handleEdit} id="delete-show-edit-option-edit" className="delete-show-edit-modal-category">Edit</button>
+                {deleteButton}
+                {editButton}
 
                 <button onClick={this.handleShow} id="delete-show-edit-option-show" className="delete-show-edit-modal-category">Go to post</button>
 
