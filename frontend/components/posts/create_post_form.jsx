@@ -9,13 +9,14 @@ class CreatePostForm extends React.Component {
             user_id: this.props.currentUser.id,
             caption: '',
             photoFile: null,
-            photoUrl: null,
-            errors: []
+            photoUrl: null
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleFile = this.handleFile.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSuccessSubmit = this.handleSuccessSubmit.bind(this);
+
         this.renderErrors = this.renderErrors.bind(this);
     }
 
@@ -49,29 +50,23 @@ class CreatePostForm extends React.Component {
             formData.append('post[photo]', this.state.photoFile)
         };
 
-        this.props.createPost(formData).then(() => this.props.history.replace('/'))
-        
-        // .fail(() => {this.setState({errors: this.props.errors})});
+        this.props.createPost(formData).then(() => this.handleSuccessSubmit()).fail(() => this.renderErrors())
+    }
 
-        this.renderErrors();
-        // this.props.createPost(formData).then(() => location.reload());
-
-
+    handleSuccessSubmit() {
+        this.props.history.replace('/');
         this.props.closeModal();
     }
 
     renderErrors() {
-        if (this.state.errors.length > 0) {
-            return this.state.errors.map((error, index) => {
+        console.log("render errors");
+        console.log(this.props.errors.length > 0)
+        if (this.props.errors.length) {
+            return this.props.errors.map((error, index) => {
                 return (<p className="errors" key={index}>{error}</p>)
             });
         }
-        else {
-            return null;
-            this.props.closeModal()
-        }
     }
-
 
 
     render() {
@@ -115,6 +110,7 @@ class CreatePostForm extends React.Component {
                                 </div>
                                 <div>
                                     <textarea id="caption-input" type="text" value={this.state.caption} placeholder="Write a caption..." onChange={this.handleInput}></textarea>
+                                    {this.renderErrors()}
                                 </div>
                             </div>
                         </form>
