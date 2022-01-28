@@ -46,36 +46,17 @@ class CreatePostForm extends React.Component {
         if (this.state.photoFile) {
             formData.append('post[photo]', this.state.photoFile)
         };
-        // debugger;
-        // $.ajax({
-        //     method: 'POST',
-        //     url: `/api/posts`,
-        //     data: formData,
-        //     contentType: false,
-        //     processData: false
-        // }).then(() => this.props.location.reload())
 
         this.props.createPost(formData).then(() => this.props.history.push('/'));
 
-            // () => this.props.history.push('/'))
-
-        // this.setState({counter: this.state.counter + 1});
-        // .then(this.props.fetchAllPosts());
         this.props.closeModal();
     }
+    
 
     componentDidMount() {
         this.props.fetchAllPosts();
     }
     
-    // componentDidUpdate(prevProps) {
-    //     // debugger;
-    //     if (this.props.posts.length !== prevProps.posts.length) {
-    //         // this.props.fetchAllPosts()
-    //         // this.setState(this.props.post)
-    //         this.c
-    //     };
-    // }
 
     render() {
         let preview;
