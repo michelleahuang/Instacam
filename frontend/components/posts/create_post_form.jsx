@@ -49,14 +49,11 @@ class CreatePostForm extends React.Component {
 
         this.props.createPost(formData).then(() => this.props.history.push('/'));
 
+        // this.props.createPost(formData).then(() => location.reload());
+
         this.props.closeModal();
     }
-    
 
-    componentDidMount() {
-        this.props.fetchAllPosts();
-    }
-    
 
     render() {
         let preview;
