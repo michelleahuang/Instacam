@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import DeleteShowEditPostModal from './delete_show_edit_post';
-import { deletePost } from '../../actions/post_actions';
+import EditPostForm from './create_post_form';
+import { updatePost } from '../../actions/post_actions';
 import { openModal, closeModal} from '../../actions/modal_actions';
-
 
 const mapStateToProps = (state) => {
     return {
@@ -14,9 +13,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        openModal: (modal, postId) => dispatch(openModal(modal, postId)),
+        updatePost: (post) => dispatch(updatePost(post)),
         closeModal: () => dispatch(closeModal())
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DeleteShowEditPostModal);
+export default connect(mapStateToProps, mapDispatchToProps)(EditPostForm);
