@@ -7,7 +7,8 @@ class CreatePostForm extends React.Component {
             user_id: this.props.currentUser.id,
             caption: '',
             photoFile: null,
-            photoUrl: null
+            photoUrl: null,
+            counter: 0
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -51,20 +52,30 @@ class CreatePostForm extends React.Component {
             data: formData,
             contentType: false,
             processData: false
-        }).then(this.props.fetchAllPosts());
+        }).then(this.setState({counter: this.state.counter + 1}))
+
+        // this.setState({counter: this.state.counter + 1});
+        // .then(this.props.fetchAllPosts());
 
         this.props.closeModal();
     }
-    
-    componentDidUpdate(prevProps) {
-        // debugger;
-        if (this.props.posts.length !== prevProps.posts.length) {
-            // this.props.fetchAllPosts()
-            this.setState(this.props.post)
-        };
+
+    componentDidMount() {
+        this.props.fetchAllPosts();
     }
+    
+    // componentDidUpdate(prevProps) {
+    //     // debugger;
+    //     if (this.props.posts.length !== prevProps.posts.length) {
+    //         // this.props.fetchAllPosts()
+    //         // this.setState(this.props.post)
+    //         this.c
+    //     };
+    // }
 
     render() {
+        console.log(this.state.counter);
+
         let preview;
 
         if (this.state.photoUrl) {
