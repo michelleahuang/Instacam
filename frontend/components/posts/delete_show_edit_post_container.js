@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import DeleteShowEditPostModal from './delete_show_edit_post';
-import { deletePost } from '../../actions/post_actions';
+import { deletePost, fetchAllPosts } from '../../actions/post_actions';
 import { openModal, closeModal} from '../../actions/modal_actions';
 
 
@@ -15,6 +15,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        deletePost: (postId) => dispatch(deletePost(postId)),
+        fetchAllPosts: () => dispatch(fetchAllPosts()),
         openModal: (modal, postId) => dispatch(openModal(modal, postId)),
         closeModal: () => dispatch(closeModal())
     };

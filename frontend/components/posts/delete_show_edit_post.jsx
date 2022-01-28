@@ -7,6 +7,7 @@ class DeleteShowEditPostModal extends React.Component {
 
         this.handleShow = this.handleShow.bind(this)
         this.handleEdit = this.handleEdit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     handleShow(e) {
@@ -15,12 +16,13 @@ class DeleteShowEditPostModal extends React.Component {
     }
 
     handleEdit(e) {
-        // this.props.history.push(`/posts/${this.props.postId}/edit`);
         this.props.openModal('edit_post', this.props.postId);
-
     }
 
-
+    handleDelete(e) {
+        this.props.deletePost(this.props.postId);
+        this.props.closeModal();
+    }
 
 
     render() {
@@ -30,11 +32,11 @@ class DeleteShowEditPostModal extends React.Component {
         if (this.props.post.userId === this.props.currentUser.id) {
             editButton = <button onClick={this.handleEdit} id="delete-show-edit-option-edit" className="delete-show-edit-modal-category">Edit</button>
         } else {
-            editButton = <button disabled onClick={this.handleEdit} id="delete-show-edit-option-edit-disabled" className="delete-show-edit-modal-category">Edit</button>
+            editButton = <button disabled id="delete-show-edit-option-edit-disabled" className="delete-show-edit-modal-category">Edit</button>
         }
 
         if (this.props.post.userId === this.props.currentUser.id) {
-            deleteButton = <button id="delete-show-edit-option-delete" className="delete-show-edit-modal-category">Delete</button>
+            deleteButton = <button onClick={this.handleDelete} id="delete-show-edit-option-delete" className="delete-show-edit-modal-category">Delete</button>
         } else {
             deleteButton = <button id="delete-show-edit-option-delete-disabled" className="delete-show-edit-modal-category">Delete</button>
         }
@@ -44,11 +46,8 @@ class DeleteShowEditPostModal extends React.Component {
             <div id="delete-show-edit-modal-container">
                 {deleteButton}
                 {editButton}
-
                 <button onClick={this.handleShow} id="delete-show-edit-option-show" className="delete-show-edit-modal-category">Go to post</button>
-
                 <button id="delete-show-edit-option-cancel" className="delete-show-edit-modal-category" onClick={this.props.closeModal}>Cancel</button>
-
             </div>
         );
     }
