@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'react-router-dom';
 
 class CreatePostForm extends React.Component {
     constructor(props) {
@@ -45,7 +44,7 @@ class CreatePostForm extends React.Component {
         if (this.state.photoFile) {
             formData.append('post[photo]', this.state.photoFile)
         };
-
+        // debugger;
         $.ajax({
             method: 'POST',
             url: `/api/posts`,
@@ -55,6 +54,14 @@ class CreatePostForm extends React.Component {
         }).then(this.props.fetchAllPosts());
 
         this.props.closeModal();
+    }
+    
+    componentDidUpdate(prevProps) {
+        // debugger;
+        if (this.props.posts.length !== prevProps.posts.length) {
+            // this.props.fetchAllPosts()
+            this.setState(this.props.post)
+        };
     }
 
     render() {
