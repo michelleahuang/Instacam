@@ -2,12 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import CreatePostFormContainer from '../posts/create_post_form_container';
+import EditPostFormContainer from '../posts/edit_post_form_container';
 import DeleteShowEditPostModalContainer from '../posts/delete_show_edit_post_container';
 
-function Modal({modal, closeModal}) {
+function Modal({modal, postId, closeModal}) {
     if (!modal) {
         return null;
     }
+
+    console.log(postId);
 
     let component;
     switch (modal) {        
@@ -16,6 +19,10 @@ function Modal({modal, closeModal}) {
             break;
         case 'delete_show_edit':
             component = <DeleteShowEditPostModalContainer />
+            break;
+        case 'edit_post':
+            debugger
+            component = <EditPostFormContainer postId={postId} />
             break;
         default:
             return null;
@@ -34,6 +41,7 @@ const mapStateToProps = (state) => {
         
     if (state.ui.modal) {
         if (state.ui.modal.postId) {
+            debugger
             return {
                 modal: state.ui.modal.type,
                 postId: state.ui.modal.postId

@@ -9,6 +9,7 @@ const modalReducer = (oldState = null, action) => {
             let nextState;
             
             if (action.postId) {
+                debugger
                 nextState = { type: action.modal, postId: action.postId }
             } else {
                 nextState = action.modal

@@ -12,13 +12,12 @@
 #post-show-container {
     display: flex;
     width: 100%;
-    // border: 1px solid rgb(219, 219, 219);
-    border: 1px solid red;
+    border: 1px solid rgb(219, 219, 219);
 }
 
 
 #individual-post-photo {
-    width: 70%;
+    width: calc(100% - 300px);
     height: auto;
     object-fit: contain;
 }
@@ -30,7 +29,7 @@
 #post-photo-right-side {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 300px;
 }
 
 #right-side-header {

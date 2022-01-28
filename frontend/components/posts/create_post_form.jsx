@@ -57,6 +57,11 @@ class CreatePostForm extends React.Component {
         this.props.closeModal();
     }
 
+    componentDidUpdate(prevProps) {
+        // if post number is different from before, need to fetchallposts again
+        //prevProps (if they're not the same as ownProps)
+    }
+
     render() {
         let preview;
 
