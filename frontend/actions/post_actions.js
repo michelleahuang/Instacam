@@ -34,7 +34,6 @@ const receiveErrors = (errors) => {
 }
 
 export const fetchAllPosts = () => (dispatch) => {
-    debugger
     return PostApiUtil.fetchAllPosts()
         .then(posts => dispatch(receiveAllPosts(posts)),
             errors => dispatch(receiveErrors(errors.responseJSON)));

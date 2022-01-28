@@ -1,4 +1,4 @@
-#create-post-form-container {
+#post-form-container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,7 +7,7 @@
     margin-top: -20px;
 }
 
-#create-post-form {
+#post-form-wrapper {
     background-color: white;
     border: 1px solid black;
     width: 70%;
@@ -18,7 +18,7 @@
     min-width: 510px;
 }
 
-#create-post-form-header {
+#post-form-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,16 +27,18 @@
     border-bottom: 1px solid rgb(219, 219, 219);
 }
 
-#dummy-text {
-    color: white;
+#edit-dummy-text {
+    color: rgb(38, 38, 38);
     margin-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 #create-text {
     color: rgb(38, 38, 38);
     font-weight: 600;
     font-size: 16px;
-
 }
 
 #share-text {
