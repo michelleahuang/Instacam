@@ -19,14 +19,17 @@ class UserShow extends React.Component {
     render() {
         let usersShow;
 
-        // if (!this.props.user.posts) return null;
-
         if (!this.props.user) {
             usersShow = null;
         } else {
             let posts = this.props.user.posts;
-            let followers = this.props.user.totalCount - 1
-            let followings = this.props.user.totalCount - 1
+
+            let followers = this.props.user.totalCount ? this.props.user.totalCount - 1 : 0;
+            let followings = this.props.user.totalCount ?  this.props.user.totalCount - 1 : 0;
+
+
+            console.log(followers);
+            console.log(followings);
 
             usersShow = 
             <div id="user-show-page">
