@@ -11,10 +11,8 @@ json.partial! 'api/users/user', user: @user
 
 json.set! "posts" do 
     json.array! @user.posts.each do |post|
-        json.set! post.id do 
             json.caption post.caption
             json.photoUrl url_for(post.photo)
-        end
     end
 end
 
