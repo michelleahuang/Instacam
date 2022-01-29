@@ -95,10 +95,14 @@
     letter-spacing: 2px;
 }
 
-#posts-grid {
+#posts-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 20rem);
 }
+
+// #posts-grid {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, 20rem);
+// }
 
 #post-photo {
     width: 100px;
