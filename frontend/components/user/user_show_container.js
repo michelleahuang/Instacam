@@ -5,7 +5,7 @@ import UserShow from './user_show';
 const mapStateToProps = (state, ownProps) => {
     return {
         users: Object.values(state.entities.users),
-        user: state.entities.users[ownProps.match.params.userId]
+        user: state.entities.users[ownProps.match.params.userId],
     };
 }
 
