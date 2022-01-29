@@ -3,16 +3,11 @@ import React from 'react';
 class UserShow extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     person: ''
-        // }
     }
 
     componentDidMount() {
         window.scrollTo(0,0);
         this.props.fetchUser(this.props.match.params.userId)
-            // .then(() => this.setPerson().bind(this))
-        // this.props.fetchAllUsers();
     }
 
     componentDidUpdate(prevProps) {
@@ -21,25 +16,16 @@ class UserShow extends React.Component {
         }
     }
 
-    // setPerson() {
-    //     let person = this.props.user;
-    //     this.setState({person: person})
-    // }
-
     render() {
-        console.log('test')
-        console.log(this.props.user)
-        // if (!this.state.person) return null;
         let usersShow;
-
-        let followers = this.props.users.length - 1
-        let followings = this.props.users.length - 1
-        console.log(this.props.user)
 
         if (!this.props.user) {
             usersShow = null;
         } else {
             let posts = this.props.user.posts;
+            let followers = this.props.user.totalCount - 1
+            let followings = this.props.user.totalCount - 1
+
             usersShow = 
             <div id="user-show-page">
                 <div id="user-show-header">
