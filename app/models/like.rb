@@ -1,6 +1,6 @@
 class Like < ApplicationRecord
     validates :user_id, :post_id, presence: true 
-    validates :user_id, uniqueness: {scope: :post_id, message: "User can only like a single post once"}
+    validates :user_id, uniqueness: {scope: :post_id, message: "can only like a single post once"}
 
     belongs_to :user,
         primary_key: :id, 
