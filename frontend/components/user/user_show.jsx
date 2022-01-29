@@ -35,7 +35,7 @@ class UserShow extends React.Component {
                     <div id="user-header-right">
                         <p id="header-username">{this.props.user.username}</p>
                         <div id="user-header-stats">
-                            <p><span>#</span> posts</p>
+                            <p><span>{posts.length}</span> posts</p>
                             <p><span>{followers}</span> followers</p>
                             <p><span>{followings}</span> following</p>
                         </div>
