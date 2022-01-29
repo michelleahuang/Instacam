@@ -1,9 +1,11 @@
 import React from 'react';
+import PostIndexLikesContainer from '../likes/post_index_likes_container';
 
 class PostIndexItem extends React.Component {
     constructor(props) {
         super(props);
     }
+
 
     render() {
         let postId = this.props.post.id;
@@ -20,7 +22,9 @@ class PostIndexItem extends React.Component {
                         </div>
                     </div>
                     <img className="post-photo" src={this.props.post.photoUrl}></img>
-
+                    <div id="post-likes-comments-container">
+                        <PostIndexLikesContainer postId={postId} />
+                    </div>
                 </li>
             </div>
         );

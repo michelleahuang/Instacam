@@ -82,6 +82,16 @@ cynthia_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com
 cynthia_post2.photo.attach(io: cynthia_post2_photo, filename: 'chicken.jpg')
 cynthia_post2.save
 
+cynthia_post3 = Post.new({user_id: cynthia.id, caption: "Best days are Taco Tuesdays!"})
+cynthia_post3_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/taco.jpg')
+cynthia_post3.photo.attach(io: cynthia_post3_photo, filename: 'taco.jpg')
+cynthia_post3.save
+
+cynthia_post4 = Post.new({user_id: cynthia.id, caption: "What's your favorite dessert? Mine has to be this.."})
+cynthia_post4_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/meet_fresh.jpg')
+cynthia_post4.photo.attach(io: cynthia_post4_photo, filename: 'meetfresh.jpg')
+cynthia_post4.save
+
 josh_post1 = Post.new({user_id: josh.id, caption: "Desk setup for 2022"})
 josh_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/desk.jpg')
 josh_post1.photo.attach(io: josh_post1_photo, filename: 'desk.jpg')
