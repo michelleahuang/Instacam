@@ -10,7 +10,7 @@ class Post < ApplicationRecord
     has_many :likes, 
         primary_key: :id,
         foreign_key: :post_id,
-        class_name: :Like
+        class_name: :Like,
         dependent: :destroy
     
     has_many :comments,
