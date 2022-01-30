@@ -3,11 +3,11 @@ import { fetchAllLikes, createLike, deleteLike } from '../../actions/like_action
 import PostIndexLikes from './post_index_likes';
 
 const mapStateToProps = (state, ownProps) => {
-    let likes;
-    likes = (!state.entities.likes) ? null : Object.values(state.entities.likes).filter(like => { return like.post_id === ownProps.postId} )
+    // let likes;
+    // likes = (!state.entities.likes) ? null : Object.values(state.entities.likes).filter(like => { return like.post_id === ownProps.post.id} )
     
     return {
-        likes: likes,
+        likes: state.entities.posts[ownProps.postId].likes,
         currentUser: state.entities.users[state.session.id],
         postId: ownProps.postId
     };
