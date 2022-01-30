@@ -72,7 +72,7 @@ class PostIndexLikes extends React.Component {
 
 
     render() {  
-        // if (!this.props.posts) return null;
+        if (!this.props.posts) return null;
 
         return (
             <div>
