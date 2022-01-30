@@ -3,9 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .like-button {
-    width: 32px;
-    height: 32px;
-    background: rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-
 }
+
+#unliked:hover {
+    opacity: 50%;
+}
+
+.num-likes {
+    color: #262626;
+    font-weight: 600;
+    font-size: 14px;
+}
+
