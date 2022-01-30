@@ -1,4 +1,5 @@
 import React from 'react';
+import PostIndexLikesContainer from '../likes/post_index_likes_container';
 
 class PostShow extends React.Component {
     constructor(props) {
@@ -32,7 +33,9 @@ class PostShow extends React.Component {
                                 <p>Following</p>
                             </div>
                         </div>
-
+                        <div id="post-likes-box">
+                            <PostIndexLikesContainer post={this.props.post} postId={this.props.post.id} />
+                        </div>
                     </div>
                 </div>
             </div>
