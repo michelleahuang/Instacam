@@ -25,7 +25,8 @@ class Api::LikesController < ApplicationController
             @like.destroy 
             render :show 
         else  
-            render json: @like.errors.full_messages, status: 422
+            # render json: @like.errors.full_messages, status: 422
+            render json: {:error => "Not found" }.to_json, status: 404
         end 
 
     end 

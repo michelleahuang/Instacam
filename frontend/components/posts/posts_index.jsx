@@ -9,6 +9,7 @@ class PostsIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchAllPosts();
+        this.props.fetchAllLikes();
     }
 
     render() {
