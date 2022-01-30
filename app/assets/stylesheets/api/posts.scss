@@ -105,3 +105,26 @@
     box-sizing: border-box;
 }
 
+#post-caption {
+    display: flex;
+    margin-top: 10px;
+}
+
+#post-caption-username {
+    color: #262626;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#post-caption-username:hover {
+    text-decoration: underline;
+}
+
+#post-caption-body {
+    color: #262626;
+    font-weight: 400;
+    font-size: 14px;
+}
+

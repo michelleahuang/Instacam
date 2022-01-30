@@ -22,7 +22,6 @@ class NavBar extends React.Component {
 
     render() {
         let display = null;
-        console.log(this.state.show);
 
         if (this.props.currentUser) {
             display = 

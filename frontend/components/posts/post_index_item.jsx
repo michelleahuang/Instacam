@@ -24,6 +24,10 @@ class PostIndexItem extends React.Component {
                     <img className="post-photo" src={this.props.post.photoUrl}></img>
                     <div id="post-likes-comments-container">
                         <PostIndexLikesContainer post={this.props.post} postId={postId} />
+                        <div id="post-caption">
+                            <p id="post-caption-username">{this.props.post.creator}</p>
+                            <p id="post-caption-body">{this.props.post.caption}</p>
+                        </div>
                     </div>
                 </li>
             </div>
