@@ -10,7 +10,7 @@
     margin-top: 60px;
     align-items: center;
     width: 70%;
-    height: 100vh;
+    height: 100%;
     border: 1px solid red;
 }
 
@@ -101,6 +101,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
+    padding-bottom: 25px;
 }
 
 #post-photo {
