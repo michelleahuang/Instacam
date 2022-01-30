@@ -27,10 +27,6 @@ class UserShow extends React.Component {
             let followers = this.props.user.totalCount ? this.props.user.totalCount - 1 : 0;
             let followings = this.props.user.totalCount ?  this.props.user.totalCount - 1 : 0;
 
-
-            console.log(followers);
-            console.log(followings);
-
             usersShow = 
             <div id="user-show-page">
                 <div id="user-show-header">

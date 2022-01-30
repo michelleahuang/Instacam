@@ -6,6 +6,7 @@ class NavBar extends React.Component {
         super(props);
         this.state = {show: false};
         this.showDropdown = this.showDropdown.bind(this);
+        this.logout = this.logout.bind(this);
     }
 
     showDropdown(e) {
@@ -13,9 +14,15 @@ class NavBar extends React.Component {
         this.setState({show: !this.state.show})
     }
 
+    logout() {
+        this.setState({show: false});
+        this.props.logout();
+    }
+
 
     render() {
         let display = null;
+        console.log(this.state.show);
 
         if (this.props.currentUser) {
             display = 
@@ -34,10 +41,10 @@ class NavBar extends React.Component {
                                     <p>Profile</p>
                                 </div>
                                 <div className="dropdown-icon-div">
-                                    <svg onClick={this.props.logout} className="dropdown-switch dropdown-icon" aria-label="Switch Accounts" color="#262626" fill="#262626" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M8 8.363a1 1 0 00-1-1H4.31a8.977 8.977 0 0114.054-1.727 1 1 0 101.414-1.414A11.003 11.003 0 003 5.672V3.363a1 1 0 10-2 0v5a1 1 0 001 1h5a1 1 0 001-1zm14 6.274h-5a1 1 0 000 2h2.69a8.977 8.977 0 01-14.054 1.727 1 1 0 00-1.414 1.414A11.004 11.004 0 0021 18.33v2.307a1 1 0 002 0v-5a1 1 0 00-1-1z"></path></svg>
-                                    <p onClick={this.props.logout}>Switch Accounts</p>
+                                    <svg onClick={this.logout} className="dropdown-switch dropdown-icon" aria-label="Switch Accounts" color="#262626" fill="#262626" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M8 8.363a1 1 0 00-1-1H4.31a8.977 8.977 0 0114.054-1.727 1 1 0 101.414-1.414A11.003 11.003 0 003 5.672V3.363a1 1 0 10-2 0v5a1 1 0 001 1h5a1 1 0 001-1zm14 6.274h-5a1 1 0 000 2h2.69a8.977 8.977 0 01-14.054 1.727 1 1 0 00-1.414 1.414A11.004 11.004 0 0021 18.33v2.307a1 1 0 002 0v-5a1 1 0 00-1-1z"></path></svg>
+                                    <p onClick={this.logout}>Switch Accounts</p>
                                 </div>
-                                <div className="dropdown-icon-div" id="dropdown-logout" onClick={this.props.logout}>
+                                <div className="dropdown-icon-div" id="dropdown-logout" onClick={this.logout}>
                                     <p>Log Out</p>
                                 </div>
                             </div>
