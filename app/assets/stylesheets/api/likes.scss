@@ -3,12 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .like-heart-button {
+    margin-top: 5px;
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
 
 .unlike-heart-button {
+    margin-top: 5px;
     width: 24px;
     height: 24px;
     cursor: pointer;
@@ -36,5 +38,9 @@
     color: #262626;
     font-weight: 600;
     font-size: 14px;
+    margin-top: 7px;
 }
 
+#likes-container {
+
+}

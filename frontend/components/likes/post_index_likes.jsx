@@ -90,7 +90,7 @@ class PostIndexLikes extends React.Component {
     }
     
     numberOfLikes() {
-        if (!this.props.likes) {
+        if (!this.props.likes || this.props.likes.length === 0) {
             return null
         } else {
             if (this.props.likes.length === 1) {
@@ -105,7 +105,7 @@ class PostIndexLikes extends React.Component {
         if (!this.props.post) return null;
 
         return (
-            <div>
+            <div id="likes-container">
                 {this.showLikeHeart()}
                 {this.numberOfLikes()}
             </div>
