@@ -124,13 +124,15 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #post-photo-stats {
+    display: flex;
 }
 
 #post-photo-overlay {
-    display: flex;
     display: none;
 }
 
@@ -139,9 +141,16 @@
     font-size: 14px;
     color: white;
     display: flex;
+    align-items: center;
 }
 
+#post-photo-likes-container {
+    margin-right: 20px;
+}
 
+.post-svg {
+    margin-right: 5px;
+}
 
 
 
