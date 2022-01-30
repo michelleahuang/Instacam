@@ -2,14 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.like-button {
+.like-heart-button {
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
 
-#unliked:hover {
+.unlike-heart-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.like-heart-button:hover {
     opacity: 50%;
+}
+
+.unlike-heart-button {
+    animation-duration: 1000ms;
+    animation-name: like-heart-animation;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes like-heart-animation { 
+    0% {opacity:0; transform:scale(0);}
+    15% {opacity:.9; transform:scale(1.2);}
+    30% {transform:scale(.95);}
+    45%,
+    80% {opacity:.9; transform:scale(1);}
 }
 
 .num-likes {
