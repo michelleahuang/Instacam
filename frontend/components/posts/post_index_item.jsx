@@ -12,7 +12,7 @@ class PostIndexItem extends React.Component {
         let postId = this.props.post.id;
         return (
             <div>
-                <li>
+                <li id="post-index-item">
                     <div id="post-header">
                         <div id="post-header-left">
                             <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>

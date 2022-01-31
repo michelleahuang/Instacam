@@ -10,7 +10,7 @@ class CommentsIndexItem extends React.Component {
     handleDelete() {
         if (this.props.comment.userId === this.props.currentUserId) {
             return (
-                <div>
+                <div id="comments-trash-container">
                     <i className="fas fa-trash"></i>
                 </div>
             )
@@ -21,12 +21,12 @@ class CommentsIndexItem extends React.Component {
 
     render() {
         return (
-            <li>
+            <li id="comments-item-container">
                 <div id="comments-body-item-container">
                     <p id="comment-username">{this.props.comment.username}</p>
                     <p id="comment-body">{this.props.comment.body}</p>
-                    {this.handleDelete()}
                 </div>
+                    {this.handleDelete()}
             </li>
         )
     }
