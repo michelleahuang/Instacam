@@ -39,7 +39,7 @@ class CommentsIndex extends React.Component {
         return (
             <div id="comment-container">
                 <ul id="comments-list">
-                    {this.props.comments.map(comment => <CommentsIndexItem key={comment.id} comment={comment} currentUserId={this.state.user_id} />)}
+                    {this.props.comments.map(comment => <CommentsIndexItem key={comment.id} comment={comment} currentUserId={this.state.user_id} openModal={this.props.openModal} />)}
                 </ul>
                 <form id="comment-form" onSubmit={this.handleSubmit}>
                     <div id="comment-form-svg">
