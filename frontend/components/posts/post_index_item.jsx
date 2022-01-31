@@ -80,7 +80,7 @@ class PostIndexItem extends React.Component {
                             <p id="post-caption-body">{this.props.post.caption}</p>
                         </div>
                         <CommentsIndexContainer post={this.props.post} postId={postId} />
-                        <p id="post-time">{this.calculateTime(this.props.post.createdAt)} AGO</p>
+                        <p className="post-time">{this.calculateTime(this.props.post.createdAt)} AGO</p>
                         <CommentsFormContainer post={this.props.post} postId={postId}/>
                     </div>
                 </li>
