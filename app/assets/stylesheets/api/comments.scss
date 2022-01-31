@@ -4,11 +4,11 @@
 
 #comment-container {
     width: 100%;
-    border-bottom: 1px solid rgb(219, 219, 219);
 }
 
 #comments-list {
     margin-top: 4px;
+    margin-bottom: 4px;
     padding: 0 15px;
 }
 
@@ -58,10 +58,10 @@
 #comment-form {
     display: flex;
     flex-grow: 1;
-    margin-top: 15px;
     width: 100%;
     align-items: center;
-    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    border-top: 1px solid rgb(219, 219, 219);
     padding: 5px 0;
 }
 
@@ -100,12 +100,3 @@
     margin: 0 5px;
 }
 
-#post-time {
-    font-size: 10px;
-    color: rgb(142, 142, 142);
-    font-weight: 400;
-    padding-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 7px;
-    letter-spacing: 0.2px;
-}

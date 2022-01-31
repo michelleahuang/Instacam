@@ -1,5 +1,8 @@
 import { connect } from 'react-redux';
 import PostShow from './post_show';
+import { fetchPost } from '../../actions/post_actions';
+import { fetchAllLikes } from '../../actions/like_actions';
+import { fetchAllComments } from '../../actions/comment_actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -9,7 +12,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchPost: (postId) => dispatch(fetchPost(postId))
+        fetchPost: (postId) => dispatch(fetchPost(postId)),
+        fetchAllLikes: () => dispatch(fetchAllLikes()),
+        fetchAllComments: () => dispatch(fetchAllComments())
     };
 }
 
