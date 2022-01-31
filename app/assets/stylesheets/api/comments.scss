@@ -40,6 +40,7 @@
     width: 100%;
     align-items: center;
     border-top: 1px solid #dbdbdb;
+    padding: 5px 0;
 }
 
 #comment-form-svg{
@@ -51,9 +52,8 @@
     margin: 0 5px;
 }
 
-#comment-form textarea {
+#comment-form input {
     border: none;
-    resize: none;
     font-weight: 400;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -62,7 +62,7 @@
     width: calc(100% - 80px);
 }
 
-#comment-form textarea:focus{
+#comment-form input:focus{
     outline: none;
 }
 
