@@ -10,7 +10,7 @@ class CommentsIndexItem extends React.Component {
     handleDelete() {
         if (this.props.comment.userId === this.props.currentUserId) {
             return (
-                <div id="comments-trash-container" onClick={() => this.props.openModal('delete_comment')}>
+                <div id="comments-trash-container" onClick={() => this.props.deleteComment(this.props.comment.id)}>
                     <i className="fas fa-trash"></i>
                 </div>
             )

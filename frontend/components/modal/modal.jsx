@@ -4,7 +4,6 @@ import { closeModal } from '../../actions/modal_actions';
 import CreatePostFormContainer from '../posts/create_post_form_container';
 import EditPostFormContainer from '../posts/edit_post_form_container';
 import DeleteShowEditPostModalContainer from '../posts/delete_show_edit_post_container';
-import DeleteCommentContainer from '../comments/delete_comment_container';
 
 function Modal({modal, postId, closeModal}) {
     if (!modal) {
@@ -22,8 +21,6 @@ function Modal({modal, postId, closeModal}) {
         case 'edit_post':
             component = <EditPostFormContainer postId={postId} />
             break;
-        case 'delete_comment':
-            component = <DeleteCommentContainer />
         default:
             return null;
     }

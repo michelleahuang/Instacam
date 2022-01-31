@@ -1,5 +1,4 @@
 import * as CommentApiUtil from '../util/comment_api_util';
-import { REMOVE_LIKE } from './like_actions';
 
 export const RECEIVE_ALL_COMMENTS = 'RECEIVE_ALL_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
@@ -22,7 +21,7 @@ const receiveComment = (comment) => {
 
 const removeComment = (commentId) => {
     return {
-        type: REMOVE_LIKE,
+        type: REMOVE_COMMENT,
         commentId: commentId
     };
 }
