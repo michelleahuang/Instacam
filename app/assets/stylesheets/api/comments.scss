@@ -1,3 +1,79 @@
 // Place all the styles related to the api::comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#comment-container {
+    width: 100%;
+}
+
+#comments-list {
+    margin-top: 8px;
+    padding: 0 15px;
+}
+
+#comments-body-item-container {
+    display: flex;
+    margin: 6px 0px;
+    color: rgb(38, 38, 38);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+#comment-username {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+#comment-username:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#comment-body {
+    font-weight: 400;
+}
+
+#comment-form {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 15px;
+    width: 100%;
+    align-items: center;
+    border-top: 1px solid #dbdbdb;
+}
+
+#comment-form-svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+#comment-form textarea {
+    border: none;
+    resize: none;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(38, 38, 38);
+    background-color: #fafafa;
+    width: calc(100% - 80px);
+}
+
+#comment-form textarea:focus{
+    outline: none;
+}
+
+#comment-post-button {
+    width: 40px;
+    height: 40px;
+    color: rgb(0, 149, 246);
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    background-color: #fafafa;
+    cursor: pointer;
+    margin: 0 5px;
+}

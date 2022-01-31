@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#likes-container {
+    padding: 0 15px;
+}
+
 .like-heart-button {
     margin-top: 5px;
     width: 24px;
