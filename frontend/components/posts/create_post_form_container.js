@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import CreatePostForm from './create_post_form';
 import { fetchAllPosts, createPost } from '../../actions/post_actions';
+import { fetchUser } from '../../actions/user_actions';
 import { openModal, closeModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
@@ -16,6 +17,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         createPost: (post) => dispatch(createPost(post)),
         fetchAllPosts: () => dispatch(fetchAllPosts()),
+        fetchUser: (userId) => dispatch(fetchUser(userId)),
         openModal: () => dispatch(openModal()),
         closeModal: () => dispatch(closeModal())
     };
