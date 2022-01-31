@@ -83,14 +83,29 @@ cynthia_post2.photo.attach(io: cynthia_post2_photo, filename: 'chicken.jpg')
 cynthia_post2.save
 
 cynthia_post3 = Post.new({user_id: cynthia.id, caption: "Best days are Taco Tuesdays!"})
-cynthia_post3_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/taco.jpg')
-cynthia_post3.photo.attach(io: cynthia_post3_photo, filename: 'taco.jpg')
+cynthia_post3_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/tacos.jpg')
+cynthia_post3.photo.attach(io: cynthia_post3_photo, filename: 'tacos.jpg')
 cynthia_post3.save
 
 cynthia_post4 = Post.new({user_id: cynthia.id, caption: "What's your favorite dessert? Mine has to be this.."})
 cynthia_post4_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/meet_fresh.jpg')
 cynthia_post4.photo.attach(io: cynthia_post4_photo, filename: 'meetfresh.jpg')
 cynthia_post4.save
+
+cynthia_post5 = Post.new({user_id: cynthia.id, caption: "Currently drooling over last week's pasta dish..."})
+cynthia_post5_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/pasta.jpg')
+cynthia_post5.photo.attach(io: cynthia_post5_photo, filename: 'pasta.jpg')
+cynthia_post5.save
+
+cynthia_post6 = Post.new({user_id: cynthia.id, caption: "Mondays aren't so bad with some avo toast and coffee!"})
+cynthia_post6_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/bluestone.jpg')
+cynthia_post6.photo.attach(io: cynthia_post6_photo, filename: 'bluestone.jpg')
+cynthia_post6.save
+
+cynthia_post7 = Post.new({user_id: cynthia.id, caption: "Purple sweet potato ice cream and tiramisu... yum!"})
+cynthia_post7_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/ube.jpg')
+cynthia_post7.photo.attach(io: cynthia_post7_photo, filename: 'ube.jpg')
+cynthia_post7.save
 
 josh_post1 = Post.new({user_id: josh.id, caption: "Desk setup for 2022"})
 josh_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/desk.jpg')
@@ -144,3 +159,9 @@ Like.destroy_all
 like1 = Like.create!(user_id: demo.id, post_id: hilary_post1.id)
 like2 = Like.create!(user_id: demo.id, post_id: hilary_post2.id)
 like3 = Like.create!(user_id: cynthia.id, post_id: hilary_post1.id)
+
+
+Comment.destroy_all
+comment1 = Comment.create!(user_id: demo.id, post_id: hilary_post1.id, body: "So cool!")
+comment2 = Comment.create!(user_id: demo.id, post_id: hilary_post2.id, body: "Amazing!")
+comment3 = Comment.create!(user_id: cynthia.id, post_id: hilary_post1.id, body: "Fab!")

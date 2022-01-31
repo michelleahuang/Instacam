@@ -1,5 +1,6 @@
 import React from 'react';
 import PostIndexLikesContainer from '../likes/post_index_likes_container';
+import CommentsIndexContainer from '../comments/comments_index_container';
 
 class PostIndexItem extends React.Component {
     constructor(props) {
@@ -28,6 +29,7 @@ class PostIndexItem extends React.Component {
                             <p id="post-caption-username">{this.props.post.creator}</p>
                             <p id="post-caption-body">{this.props.post.caption}</p>
                         </div>
+                        <CommentsIndexContainer post={this.props.post} postId={postId} />
                     </div>
                 </li>
             </div>

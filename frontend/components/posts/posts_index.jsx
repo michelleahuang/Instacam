@@ -10,6 +10,7 @@ class PostsIndex extends React.Component {
     componentDidMount() {
         this.props.fetchAllPosts();
         this.props.fetchAllLikes();
+        this.props.fetchAllComments();
     }
 
     render() {

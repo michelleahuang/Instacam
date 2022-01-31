@@ -7,7 +7,8 @@ import Root from './components/root';
 // import { fetchAllPosts, fetchPost, createPost, updatePost, deletePost } from "./util/post_api_util";
 import { login, logout, signup } from './actions/session_actions';
 import { fetchAllPosts, fetchPost, createPost, updatePost, deletePost } from "./actions/post_actions";
-import {fetchAllLikes, createLike, deleteLike } from "./actions/like_actions";
+import { fetchAllLikes, createLike, deleteLike } from "./actions/like_actions";
+import { fetchAllComments, createComment, deleteComment } from "./actions/comment_actions"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,6 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchAllLikes = fetchAllLikes;
     window.createLike = createLike;
     window.deleteLike = deleteLike;
+
+    window.fetchAllComments = fetchAllComments;
+    window.createComment = createComment;
+    window.deleteComment = deleteComment;
     
     window.store = store;
     // TESTING END
