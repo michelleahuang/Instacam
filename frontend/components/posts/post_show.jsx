@@ -77,32 +77,35 @@ class PostShow extends React.Component {
                 <div id="post-show-container">
                     <img id="individual-post-photo" src={this.props.post.photoUrl}></img>
                     <div id="post-photo-right-container">
-                        <div id="post-photo-right-side">
-                            <div id="right-side-header">
+                        <div>
+                            <div id="post-photo-right-side">
+                                <div id="right-side-header">
+                                    <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
+                                    <p id="post-username">{this.props.post.creator}</p>
+                                    <p id="period">•</p>
+                                    <p>Following</p>
+                                </div>
+                            </div>
+                            <div id="post-photo-photo-caption-container">
                                 <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
-                                <p id="post-username">{this.props.post.creator}</p>
-                                <p id="period">•</p>
-                                <p>Following</p>
+                                <div id="post-show-user-caption-container">
+                                    <p id="post-show-caption"><span id="post-username">{this.props.post.creator}</span>{this.props.post.caption}</p>
+                                </div>
+                            </div>
+                            <div id="post-comments-box">
+                                <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id}/>
                             </div>
                         </div>
-                        <div id="post-photo-photo-caption-container">
-                            <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
-                            <div id="post-show-user-caption-container">
-                                <p id="post-show-caption"><span id="post-username">{this.props.post.creator}</span>{this.props.post.caption}</p>
+                        <div>
+                            <div id="post-likes-box">
+                                <PostIndexLikesContainer post={this.props.post} postId={this.props.post.id} />
                             </div>
-                        </div>
-                        <div id="post-comments-box">
-                            <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id}/>
-                        </div>
-                        <div id="post-likes-box">
-                            <PostIndexLikesContainer post={this.props.post} postId={this.props.post.id} />
-                        </div>
-                        <div>
-                            <p className="post-time">{this.calculateTime(this.props.post.createdAt)} AGO</p>
-                        </div>
-
-                        <div>
-                            <CommentsFormContainer post={this.props.post} postId={this.props.post.id} />
+                            <div>
+                                <p className="post-time">{this.calculateTime(this.props.post.createdAt)} AGO</p>
+                            </div>
+                            <div id="post-comments-form-box">
+                                <CommentsFormContainer post={this.props.post} postId={this.props.post.id} />
+                            </div>
                         </div>
                     </div>
                 </div>
