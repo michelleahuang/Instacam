@@ -92,7 +92,7 @@ class PostShow extends React.Component {
                             </div>
                         </div>
                         <div id="post-comments-box">
-                            <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id} calculateTime={this.calculateTime}/>
+                            <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id}/>
                         </div>
                         <div id="post-likes-box">
                             <PostIndexLikesContainer post={this.props.post} postId={this.props.post.id} />

@@ -125,3 +125,22 @@
     margin-right: 15px;
     cursor: pointer;
 }
+
+#post-show-comments-username-caption-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#post-show-comments-username-caption {
+    display: flex;
+    align-items: center;
+}
+
+#post-show-time {
+    font-size: 12px;
+    color: #8e8e8e;
+    font-weight: 400;
+    margin-top: 7px;
+    letter-spacing: 0.2px;
+}
