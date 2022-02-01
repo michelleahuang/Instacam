@@ -10,7 +10,7 @@ class PostShowCommentsItem extends React.Component {
     handleDelete() {
         if (this.props.comment.userId === this.props.currentUserId) {
             return (
-                <div id="comments-trash-container" onClick={() => this.props.deleteComment(this.props.comment.id)}>
+                <div id="post-show-comments-trash-container" onClick={() => this.props.deleteComment(this.props.comment.id)}>
                     <i className="fas fa-trash"></i>
                 </div>
             )
@@ -21,13 +21,16 @@ class PostShowCommentsItem extends React.Component {
 
     render() {
         return (
-            <li id="comments-item-container">
-                <div id="comments-body-item-container">
-                    
-                    <p id="comment-username">{this.props.comment.username}</p>
-                    <p id="comment-body">{this.props.comment.body}</p>
+            <li id="post-show-comments-item-container">
+                <div id="post-show-comments-body-item-container">
+                    <div>
+                        <img className="post-profile-icon" src={this.props.comment.userAvatar}></img>
+                    </div>
+                            <p id="post-show-comment-username">{this.props.comment.username}</p>
+                            <p id="post-show-comment-body">{this.props.comment.body}</p>
+                            <p className="post-time">{this.props.calculateTime(this.props.comment.createdAt)}</p>
                 </div>
-                    {this.handleDelete()}
+                {this.handleDelete()}
             </li>
         )
     }

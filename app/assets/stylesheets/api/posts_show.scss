@@ -12,7 +12,10 @@
 #post-show-container {
     display: flex;
     width: 100%;
-    border: 1px solid rgb(219, 219, 219);
+    border-top: 1px solid rgb(219, 219, 219);
+    border-right: 1px solid rgb(219, 219, 219);
+    border-left: 1px solid rgb(219, 219, 219);
+
 }
 
 
@@ -20,6 +23,7 @@
     width: calc(100% - 300px);
     height: auto;
     object-fit: contain;
+    border-bottom: 1px solid rgb(219, 219, 219);
     // height: 100%;
     // object-fit: cover;
     // background-color: black;
@@ -27,6 +31,7 @@
 
 #post-photo-right-container {
     width: 300px;
+    border-left: 1px solid rgb(219, 219, 219);
 }
 
 #post-photo-right-side {
@@ -55,6 +60,10 @@
     color: rgb(38, 38, 38);
 }
 
+#post-comments-box {
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
 #post-likes-box {
     margin-left: 10px;
 }
@@ -74,4 +83,45 @@
     color: #262626;
     font-weight: 400;
     line-height: 18px;
+}
+
+#post-show-comments-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 15px 0px;
+}
+
+#post-show-comments-body-item-container {
+    display: flex;
+    align-items: center;
+}
+
+#comment-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+#post-show-comments-list {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#post-show-comment-username {
+    color: #262626;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#post-show-comment-body {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#post-show-comments-trash-container {
+    margin-right: 15px;
+    cursor: pointer;
 }

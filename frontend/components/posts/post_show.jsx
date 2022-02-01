@@ -1,7 +1,7 @@
 import React from 'react';
 import PostIndexLikesContainer from '../likes/post_index_likes_container';
-import PostShowCommentsContainer from '../comments/post_show_comments_container';
 import CommentsFormContainer from '../comments/comments_form_container';
+import PostShowCommentsContainer from '../comments/post_show_comments_container';
 
 class PostShow extends React.Component {
     constructor(props) {
@@ -91,8 +91,8 @@ class PostShow extends React.Component {
                                 <p id="post-show-caption"><span id="post-username">{this.props.post.creator}</span>{this.props.post.caption}</p>
                             </div>
                         </div>
-                        <div>
-                            <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id} />
+                        <div id="post-comments-box">
+                            <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id} calculateTime={this.calculateTime}/>
                         </div>
                         <div id="post-likes-box">
                             <PostIndexLikesContainer post={this.props.post} postId={this.props.post.id} />
