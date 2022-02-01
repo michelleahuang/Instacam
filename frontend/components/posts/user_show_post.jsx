@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserShowPost extends React.Component {
     constructor(props) {
@@ -22,10 +23,10 @@ class UserShowPost extends React.Component {
                 <div id="user-show-post-wrapper">
                     <div id="user-show-post-container">
                         <img id="user-show-post-photo" src={this.props.post.photoUrl}></img>
-                        { /*<div id="post-photo-right-container">
+                        <div id="user-show-post-right-container">
                             <div>
-                                <div id="post-photo-right-side">
-                                    <div id="right-side-header">
+                                <div id="user-show-post-right-side">
+                                    <div id="user-show-post-right-side-header">
                                         <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
                                         <Link to={`/users/${this.props.post.userId}`} className="link" id="post-username">{this.props.post.creator}</Link>
                                         <p id="period">•</p>
@@ -33,7 +34,7 @@ class UserShowPost extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div> */}
+                        </div> 
                     </div>
                 </div> 
             </>
