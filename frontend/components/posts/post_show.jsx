@@ -2,6 +2,7 @@ import React from 'react';
 import PostIndexLikesContainer from '../likes/post_index_likes_container';
 import PostShowCommentsFormContainer from '../comments/post_show_comments_form_container';
 import PostShowCommentsContainer from '../comments/post_show_comments_container';
+import { Link } from 'react-router-dom';
 
 class PostShow extends React.Component {
     constructor(props) {
@@ -81,7 +82,7 @@ class PostShow extends React.Component {
                             <div id="post-photo-right-side">
                                 <div id="right-side-header">
                                     <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
-                                    <p id="post-username">{this.props.post.creator}</p>
+                                    <Link to={`/users/${this.props.post.userId}`} className="link" id="post-username">{this.props.post.creator}</Link>
                                     <p id="period">•</p>
                                     <p>Following</p>
                                 </div>
@@ -89,7 +90,7 @@ class PostShow extends React.Component {
                             <div id="post-photo-photo-caption-container">
                                 <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
                                 <div id="post-show-user-caption-container">
-                                    <p id="post-show-caption"><span id="post-username">{this.props.post.creator}</span>{this.props.post.caption}</p>
+                                    <p id="post-show-caption"><Link to={`/users/${this.props.post.userId}`} className="link"><span id="post-username">{this.props.post.creator}</span></Link>{this.props.post.caption}</p>
                                 </div>
                             </div>
                             <div id="post-comments-box">

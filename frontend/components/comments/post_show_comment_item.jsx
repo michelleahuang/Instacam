@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PostShowCommentsItem extends React.Component {
     constructor(props) {
@@ -70,7 +71,7 @@ class PostShowCommentsItem extends React.Component {
                     </div>
                     <div id="post-show-comments-username-caption-time">
                         <div id="post-show-comments-username-caption">
-                            <p id="post-show-comment-username">{this.props.comment.username}</p>
+                            <Link to={`/users/${this.props.comment.userId}`} id="post-show-comment-username" className="link">{this.props.comment.username}</Link>
                             <p id="post-show-comment-body">{this.props.comment.body}</p>
                         </div>
                         <p id="post-show-time">{this.calculateTime(this.props.comment.createdAt)}</p>
