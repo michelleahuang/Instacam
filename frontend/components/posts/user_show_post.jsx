@@ -5,6 +5,10 @@ class UserShowPost extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.fetchPost(this.props.postId)
+    }
+
 
     render() {
 
@@ -17,8 +21,8 @@ class UserShowPost extends React.Component {
                 </div>
                 <div id="user-show-post-wrapper">
                     <div id="user-show-post-container">
-                        {/* <img id="individual-post-photo" src={this.props.post.photoUrl}></img>
-                        <div id="post-photo-right-container">
+                        <img id="user-show-post-photo" src={this.props.post.photoUrl}></img>
+                        { /*<div id="post-photo-right-container">
                             <div>
                                 <div id="post-photo-right-side">
                                     <div id="right-side-header">
@@ -31,8 +35,7 @@ class UserShowPost extends React.Component {
                             </div>
                         </div> */}
                     </div>
-                </div>
-    
+                </div> 
             </>
         )
     }

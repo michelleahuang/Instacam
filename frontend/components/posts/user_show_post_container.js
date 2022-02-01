@@ -3,11 +3,11 @@ import { openModal, closeModal} from '../../actions/modal_actions';
 import UserShowPost from './user_show_post';
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         currentUser: state.entities.users[state.session.id],
         postId: state.ui.modal.postId,
-        post: state.entities.posts[state.ui.modal.postId]
+        post: state.entities.posts[state.ui.modal.postId],
     };
 }
 
