@@ -1,6 +1,6 @@
 import React from 'react';
 import PostIndexLikesContainer from '../likes/post_index_likes_container';
-import CommentsFormContainer from '../comments/comments_form_container';
+import PostShowCommentsFormContainer from '../comments/post_show_comments_form_container';
 import PostShowCommentsContainer from '../comments/post_show_comments_container';
 
 class PostShow extends React.Component {
@@ -104,7 +104,7 @@ class PostShow extends React.Component {
                                 <p className="post-time">{this.calculateTime(this.props.post.createdAt)} AGO</p>
                             </div>
                             <div id="post-comments-form-box">
-                                <CommentsFormContainer post={this.props.post} postId={this.props.post.id} />
+                                <PostShowCommentsFormContainer post={this.props.post} postId={this.props.post.id} />
                             </div>
                         </div>
                     </div>

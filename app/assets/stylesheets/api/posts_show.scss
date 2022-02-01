@@ -144,3 +144,27 @@
     border-top: 1px solid rgb(239, 239, 239);
     padding-top: 3px;
 }
+
+#post-show-comment-form {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    border-top: 1px solid rgb(239, 239, 239);
+    padding: 5px 0;
+}
+
+#post-show-comment-form input {
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(38, 38, 38);
+    background-color: #fafafa;
+    width: calc(100% - 80px);
+}
+
+#post-show-comment-form input:focus{
+    outline: none;
+}
