@@ -15,7 +15,7 @@
     border-top: 1px solid rgb(219, 219, 219);
     border-right: 1px solid rgb(219, 219, 219);
     border-left: 1px solid rgb(219, 219, 219);
-
+    margin-bottom: 30px;
 }
 
 #individual-post-photo {
@@ -47,7 +47,7 @@
     display: flex;
     width: 100%;
     align-items: center;
-    border-bottom: 1px solid rgb(219, 219, 219);
+    border-bottom: 1px solid rgb(239, 239, 239);
     padding: 15px 0px;
 }
 
@@ -61,10 +61,6 @@
     font-weight: 600;
     margin-right: 10px;
     color: rgb(38, 38, 38);
-}
-
-#post-comments-box {
-    border-bottom: 1px solid rgb(219, 219, 219);
 }
 
 #post-photo-photo-caption-container {
@@ -144,3 +140,7 @@
     letter-spacing: 0.2px;
 }
 
+#post-likes-box {
+    border-top: 1px solid rgb(239, 239, 239);
+    padding-top: 3px;
+}
