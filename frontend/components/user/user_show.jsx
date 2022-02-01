@@ -59,7 +59,7 @@ class UserShow extends React.Component {
                                         </div>
                                         <div className="post-photo-stats-numbers">
                                             <svg className="post-svg" aria-label="Comment" color="#FFFFFF" fill="#FFFFFF" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="#FFFFFF" stroke="currentColor" strokeLinejoin="round" strokeWidth="2"></path></svg>
-                                            <p>#</p>
+                                            <p>{post.comments.length}</p>
                                         </div>
                                     </div>
                                 </div>
