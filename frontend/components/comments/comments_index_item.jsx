@@ -23,6 +23,7 @@ class CommentsIndexItem extends React.Component {
         return (
             <li id="comments-item-container">
                 <div id="comments-body-item-container">
+                    
                     <p id="comment-username">{this.props.comment.username}</p>
                     <p id="comment-body">{this.props.comment.body}</p>
                 </div>

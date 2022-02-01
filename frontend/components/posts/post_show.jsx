@@ -85,10 +85,11 @@ class PostShow extends React.Component {
                                 <p>Following</p>
                             </div>
                         </div>
-                        <div>
+                        <div id="post-photo-photo-caption-container">
                             <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
-                            <p>{this.props.post.creator}</p>
-                            <p>{this.props.post.caption}</p>
+                            <div id="post-show-user-caption-container">
+                                <p id="post-show-caption"><span id="post-username">{this.props.post.creator}</span>{this.props.post.caption}</p>
+                            </div>
                         </div>
                         <div>
                             <CommentsIndexContainer post={this.props.post} postId={this.props.post.id} />
