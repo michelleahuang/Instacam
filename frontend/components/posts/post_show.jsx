@@ -1,6 +1,6 @@
 import React from 'react';
 import PostIndexLikesContainer from '../likes/post_index_likes_container';
-import CommentsIndexContainer from '../comments/comments_index_container';
+import PostShowCommentsContainer from '../comments/post_show_comments_container';
 import CommentsFormContainer from '../comments/comments_form_container';
 
 class PostShow extends React.Component {
@@ -92,7 +92,7 @@ class PostShow extends React.Component {
                             </div>
                         </div>
                         <div>
-                            <CommentsIndexContainer post={this.props.post} postId={this.props.post.id} />
+                            <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id} />
                         </div>
                         <div id="post-likes-box">
                             <PostIndexLikesContainer post={this.props.post} postId={this.props.post.id} />
