@@ -5,7 +5,11 @@ class UserShowPost extends React.Component {
         super(props);
     }
 
+
     render() {
+
+        if (!this.props.post) return null;
+
         return (
             <>
                 <div id="user-show-post-close-button">
@@ -13,7 +17,19 @@ class UserShowPost extends React.Component {
                 </div>
                 <div id="user-show-post-wrapper">
                     <div id="user-show-post-container">
-
+                        {/* <img id="individual-post-photo" src={this.props.post.photoUrl}></img>
+                        <div id="post-photo-right-container">
+                            <div>
+                                <div id="post-photo-right-side">
+                                    <div id="right-side-header">
+                                        <img className="post-profile-icon" src={this.props.post.creatorAvatar}></img>
+                                        <Link to={`/users/${this.props.post.userId}`} className="link" id="post-username">{this.props.post.creator}</Link>
+                                        <p id="period">•</p>
+                                        <p>Following</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> */}
                     </div>
                 </div>
     
