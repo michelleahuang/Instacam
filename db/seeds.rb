@@ -172,7 +172,7 @@ hailey_post2_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/
 hailey_post2.photo.attach(io: hailey_post2_photo, filename: 'runway.jpg')
 hailey_post2.save
 
-hailey_post3 = Post.new({user_id: hailey.id, caption: "The happiest place on Earth"})
+hailey_post3 = Post.new({user_id: hailey.id, caption: "🤍🤍 happiest place on Earth"})
 hailey_post3_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/disney.jpg')
 hailey_post3.photo.attach(io: hailey_post3_photo, filename: 'disney.jpg')
 hailey_post3.save
@@ -182,7 +182,7 @@ hailey_post4_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/
 hailey_post4.photo.attach(io: hailey_post4_photo, filename: 'hubby.jpg')
 hailey_post4.save
 
-simu_post1 = Post.new({user_id: simu.id, caption: "Feeling so blessed... wow. Shang Chi out in theaters now!"})
+simu_post1 = Post.new({user_id: simu.id, caption: "Feeling so blessed... WOW. Shang Chi out in theaters now!"})
 simu_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/theater.jpg')
 simu_post1.photo.attach(io: simu_post1_photo, filename: 'theater.jpg')
 simu_post1.save
