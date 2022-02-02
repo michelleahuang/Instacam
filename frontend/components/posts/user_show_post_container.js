@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { openModal, closeModal} from '../../actions/modal_actions';
+import { fetchUser } from '../../actions/user_actions'
 import UserShowPost from './user_show_post';
 
 
@@ -17,6 +18,7 @@ const mapDispatchToProps = (dispatch) => {
         fetchPost: (postId) => dispatch(fetchPost(postId)),
         fetchAllLikes: () => dispatch(fetchAllLikes()),
         fetchAllComments: () => dispatch(fetchAllComments()),
+        fetchUser: (userId) => dispatch(fetchUser(userId)),
         closeModal: () => dispatch(closeModal())
     };
 }

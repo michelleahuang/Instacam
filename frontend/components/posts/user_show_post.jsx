@@ -10,11 +10,13 @@ class UserShowPost extends React.Component {
 
         this.calculateTime = this.calculateTime.bind(this);
         this.calculateCommentTime = this.calculateCommentTime.bind(this);
+        this.closePostShowModal = this.closePostShowModal.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchPost(this.props.postId)
+        this.props.fetchPost(this.props.postId);
         this.props.fetchAllComments();
+        this.props.fetchAllLikes();
     }
 
     calculateTime(date) {
@@ -105,6 +107,11 @@ class UserShowPost extends React.Component {
         return seconds + 's';
     }
 
+    closePostShowModal() {
+        this.props.closeModal();
+        this.props.fetchUser(this.props.post.userId);
+    }
+
     render() {
 
         if (!this.props.post) return null;
@@ -112,7 +119,7 @@ class UserShowPost extends React.Component {
         return (
             <>
                 <div id="user-show-post-close-button">
-                    <svg onClick={this.props.closeModal} aria-label="Close" color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"></polyline><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+                    <svg onClick={this.closePostShowModal} aria-label="Close" color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"></polyline><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
                 </div>
                 <div id="user-show-post-wrapper">
                     <div id="user-show-post-container">
@@ -139,9 +146,9 @@ class UserShowPost extends React.Component {
                                 <div id="user-show-post-comments-box">
                                     <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id} calculateCommentTime={this.calculateCommentTime}/>
                                 </div>
-                            {/* </div>
+                            </div>
                             <div>
-                                <div id="post-likes-box">
+                                <div id="user-show-post-likes-box">
                                     <PostIndexLikesContainer post={this.props.post} postId={this.props.post.id} />
                                 </div>
                                 <div>
@@ -149,7 +156,7 @@ class UserShowPost extends React.Component {
                                 </div>
                                 <div id="post-comments-form-box">
                                     <PostShowCommentsFormContainer post={this.props.post} postId={this.props.post.id} />
-                                </div> */}
+                                </div> 
                             </div> 
                         </div> 
                     </div>

@@ -30,8 +30,7 @@ class PostShowCommentsItem extends React.Component {
                     </div>
                     <div id="post-show-comments-username-caption-time">
                         <div id="post-show-comments-username-caption">
-                            <Link to={`/users/${this.props.comment.userId}`} id="post-show-comment-username" className="link">{this.props.comment.username}</Link>
-                            <p id="post-show-comment-body">{this.props.comment.body}</p>
+                            <p id="post-show-comment-body"><Link to={`/users/${this.props.comment.userId}`} id="post-show-comment-username" className="link"><span>{this.props.comment.username}</span></Link>{this.props.comment.body}</p>
                         </div>
                         <p id="post-show-time">{this.props.calculateCommentTime(this.props.comment.createdAt)}</p>
                     </div>
