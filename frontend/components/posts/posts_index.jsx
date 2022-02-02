@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBarContainer from '../nav_bar/nav_bar_container'
+import UserIndexContainer from '../user/user_index_container';
 import PostIndexItem from './post_index_item'
 
 class PostsIndex extends React.Component {
@@ -29,7 +30,7 @@ class PostsIndex extends React.Component {
                             </div>
                         </div>
                         <div id="right-side">
-
+                            <UserIndexContainer />
                         </div>
                     </div>
                 </div>

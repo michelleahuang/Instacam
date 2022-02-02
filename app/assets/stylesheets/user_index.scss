@@ -1,0 +1,44 @@
+#current-user-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-index-profile-pic {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#current-user-info {
+    display: flex;
+    align-items: center;
+}
+
+#current-user-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+#current-user-username {
+    font-weight: 600;
+    color: #262626;
+    cursor: pointer;
+}
+
+#current-user-fullname {
+    color: rgb(142, 142, 142);
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+#switch {
+    color: rgb(0, 149, 246);
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
