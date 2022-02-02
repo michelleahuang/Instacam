@@ -1,12 +1,36 @@
 #user-index-stories-container {
     display: flex;
     align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+#user-index-stories-container::-webkit-scrollbar{
+    display: none;
 }
 
 #user-stories-icon {
     width: 56px;
     height: 56px;
+    padding: 2px;
     border-radius: 50%;
+}
+
+#user-stories-padding {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#user-stories-border {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 8px;
 }
 
@@ -15,6 +39,7 @@
     align-items: center;
     flex-direction: column;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 #user-stories-username {
@@ -22,8 +47,8 @@
     font-size: 12px;
     font-weight: 400;
     letter-spacing: .01em;
-    width: 74px;
-    max-width: 74px;
+    width: 75px;
+    max-width: 75px;
     text-overflow: ellipsis;
     overflow: hidden;
     margin: 0 auto;

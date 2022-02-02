@@ -9,7 +9,11 @@ class UserStoriesItem extends React.Component {
         return (
             <div>
                 <li id="user-stories-item">
-                    <img id="user-stories-icon" src={this.props.user.photoUrl}></img>
+                    <div id="user-stories-border">
+                        <div id="user-stories-padding">
+                            <img id="user-stories-icon" src={this.props.user.photoUrl}></img>
+                        </div>
+                    </div>
                     <p id="user-stories-username">{this.props.user.username}</p>
                 </li>
             </div>
