@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarContainer from '../nav_bar/nav_bar_container'
 import UserIndexContainer from '../user/user_index_container';
+import UserStoriesContainer from '../user/user_stories_container';
 import PostIndexItem from './post_index_item'
 
 class PostsIndex extends React.Component {
@@ -12,6 +13,7 @@ class PostsIndex extends React.Component {
         this.props.fetchAllPosts();
         this.props.fetchAllLikes();
         this.props.fetchAllComments();
+        this.props.fetchAllUsers();
     }
 
     render() {
@@ -22,6 +24,7 @@ class PostsIndex extends React.Component {
                     <div id="main-posts-container">
                         <div id="left-side">
                             <div id="stories-container"> 
+                                <UserStoriesContainer />
                             </div>
                             <div id="posts-body-container">
                                 <ul id="entire-post">

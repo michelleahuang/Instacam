@@ -8,6 +8,7 @@ class CreatePostForm extends React.Component {
         this.state = {
             user_id: this.props.currentUser.id,
             caption: '',
+            errors: [],
             photoFile: null,
             photoUrl: null
         };
@@ -18,6 +19,7 @@ class CreatePostForm extends React.Component {
         this.handleSuccessSubmit = this.handleSuccessSubmit.bind(this);
 
         this.renderErrors = this.renderErrors.bind(this);
+        this.closeCreateModal = this.closeCreateModal.bind(this);
     }
 
     handleInput(e) {
@@ -50,7 +52,7 @@ class CreatePostForm extends React.Component {
             formData.append('post[photo]', this.state.photoFile)
         };
 
-        this.props.createPost(formData).then(() => this.handleSuccessSubmit()).fail(() => this.renderErrors())
+        this.props.createPost(formData).then(() => this.handleSuccessSubmit()).fail(() => this.setState({errors: this.props.errors}))
     }
 
     handleSuccessSubmit() {
@@ -65,11 +67,18 @@ class CreatePostForm extends React.Component {
     }
 
     renderErrors() {
-        if (this.props.errors.length) {
-            return this.props.errors.map((error, index) => {
+        if (this.state.errors.length > 0) {
+            return this.state.errors.map((error, index) => {
                 return (<p id="create-post-errors" className="errors" key={index}>{error}</p>)
             });
+        } else {
+            return null;
         }
+    }
+
+    closeCreateModal() {
+        this.props.closeModal();
+        this.setState({errors: []});
     }
 
     render() {
@@ -95,7 +104,7 @@ class CreatePostForm extends React.Component {
         return (
             <>
                 <div id="form-close-button">
-                    <svg onClick={this.props.closeModal} aria-label="Close" color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"></polyline><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+                    <svg onClick={this.closeCreateModal} aria-label="Close" color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"></polyline><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
                 </div>
                 <div id="post-form-container">
                     <div id="post-form-wrapper">

@@ -15,7 +15,6 @@
     width: 70%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid blue;
     margin-top: 30px;
     margin-left: 60px;
     margin-right: 60px;
@@ -37,6 +36,8 @@
     border: 1px solid rgb(219, 219, 219);
     border-radius: 3px;
     background-color: white;
+    display: flex;
+    align-items: center;
 }
 
 #posts-body-container {
@@ -96,11 +97,13 @@
 
 #right-side {
     width: 35%;
-    padding-top: 30px;
+    // padding-top: 30px;
+    padding-top: 19px;
     max-width: 300px;
     position: sticky;
     align-self: flex-start;
     top: 60px;
+    min-width: 200px;
 }
 
 #post-likes-comments-container {
