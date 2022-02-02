@@ -7,7 +7,6 @@ const modalReducer = (oldState = null, action) => {
     switch (action.type) {
         case OPEN_MODAL:
             let nextState;
-            
             if (action.postId) {
                 nextState = { type: action.modal, postId: action.postId }
             } else {

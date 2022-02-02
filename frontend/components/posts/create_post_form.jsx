@@ -54,7 +54,13 @@ class CreatePostForm extends React.Component {
     }
 
     handleSuccessSubmit() {
-        this.props.history.replace('/');
+        if (this.props.history.location.pathname === '/') {
+            this.props.history.replace('/')
+        } else if (this.props.history.location.pathname === `/users/${this.props.currentUser.id}`) {
+            this.props.fetchUser(this.props.currentUser.id)
+            this.props.history.replace(`/users/${this.props.currentUser.id}`)
+        }
+
         this.props.closeModal();
     }
 
@@ -65,7 +71,6 @@ class CreatePostForm extends React.Component {
             });
         }
     }
-
 
     render() {
         let preview;

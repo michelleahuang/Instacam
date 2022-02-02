@@ -20,7 +20,6 @@ class EditPostForm extends React.Component {
     }
 
     render() {
-        console.log(this.state);
         let preview;
 
         if (this.state.photoUrl) {

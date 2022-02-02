@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBarContainer from '../nav_bar/nav_bar_container'
+import UserIndexContainer from '../user/user_index_container';
 import PostIndexItem from './post_index_item'
 
 class PostsIndex extends React.Component {
@@ -9,6 +10,8 @@ class PostsIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchAllPosts();
+        this.props.fetchAllLikes();
+        this.props.fetchAllComments();
     }
 
     render() {
@@ -24,10 +27,10 @@ class PostsIndex extends React.Component {
                                 <ul id="entire-post">
                                     {this.props.posts.slice(0).reverse().map(post => <PostIndexItem key={post.id} post={post} openModal={this.props.openModal} /> )}
                                 </ul>
-                            </div>
+                            </div> 
                         </div>
                         <div id="right-side">
-
+                            <UserIndexContainer />
                         </div>
                     </div>
                 </div>

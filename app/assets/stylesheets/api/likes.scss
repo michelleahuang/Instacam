@@ -1,0 +1,48 @@
+// Place all the styles related to the api::likes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#likes-container {
+    padding: 0 15px;
+}
+
+.like-heart-button {
+    margin-top: 5px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.unlike-heart-button {
+    margin-top: 5px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.like-heart-button:hover {
+    opacity: 50%;
+}
+
+.unlike-heart-button {
+    animation-duration: 1000ms;
+    animation-name: like-heart-animation;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes like-heart-animation { 
+    0% {opacity:0; transform:scale(0);}
+    15% {opacity:.9; transform:scale(1.2);}
+    30% {transform:scale(.95);}
+    45%,
+    80% {opacity:.9; transform:scale(1);}
+}
+
+.num-likes {
+    color: #262626;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
