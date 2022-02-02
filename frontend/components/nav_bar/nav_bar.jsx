@@ -55,7 +55,6 @@ class NavBar extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        {/* <p id="nav-bar-username">{this.props.currentUser.username}</p> */}
                 </div>
             </div>
         }
