@@ -50,8 +50,6 @@ class CreatePostForm extends React.Component {
             formData.append('post[photo]', this.state.photoFile)
         };
 
-        console.log(window.location.pathname);
-
         this.props.createPost(formData).then(() => this.handleSuccessSubmit()).fail(() => this.renderErrors())
     }
 
