@@ -45,7 +45,7 @@ hailey_avatar = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/haile
 hailey.avatar.attach(io: hailey_avatar, filename: 'hailey.jpg')
 hailey.save
 
-simu = User.new({name: "Simu Liu", email: "simuliu@email.com", username: "simu.liu", password: "password"})
+simu = User.new({name: "Simu Liu", email: "simuliu@email.com", username: "simuliu", password: "password"})
 simu_avatar = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/simu.jpg')
 simu.avatar.attach(io: simu_avatar, filename: 'simu.jpg')
 simu.save

@@ -4,6 +4,7 @@ import PostsIndex from './posts_index';
 import { fetchAllPosts } from '../../actions/post_actions';
 import { fetchAllLikes } from '../../actions/like_actions';
 import { fetchAllComments } from '../../actions/comment_actions';
+import { fetchAllUsers } from '../../actions/user_actions';
 import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
@@ -17,6 +18,7 @@ const mapDispatchToProps = (dispatch) => {
         fetchAllPosts: () => dispatch(fetchAllPosts()),
         fetchAllLikes: () => dispatch(fetchAllLikes()),
         fetchAllComments: () => dispatch(fetchAllComments()),
+        fetchAllUsers: () => dispatch(fetchAllUsers()),
         openModal: (modal, postId) => dispatch(openModal(modal, postId))
     };
 }

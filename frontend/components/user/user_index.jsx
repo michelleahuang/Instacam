@@ -7,10 +7,6 @@ class UserIndex extends React.Component {
         super(props);
     }
 
-    componentDidMount() {
-        this.props.fetchAllUsers();
-    }
-
     render() {
         let focusedUsers = this.props.users.slice(3, 8);
 
