@@ -4,6 +4,7 @@ import UserShowPost from './user_show_post';
 
 
 const mapStateToProps = (state, ownProps) => {
+
     return {
         currentUser: state.entities.users[state.session.id],
         postId: state.ui.modal.postId,
