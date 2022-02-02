@@ -99,6 +99,10 @@
     border: 1px solid blue;
     padding-top: 30px;
     max-width: 300px;
+
+    position: sticky;
+    align-self: flex-start;
+    top: 60px;
 }
 
 #post-likes-comments-container {
