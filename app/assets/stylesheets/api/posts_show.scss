@@ -72,6 +72,8 @@
 
 #post-show-user-caption-container {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
 #post-show-caption {

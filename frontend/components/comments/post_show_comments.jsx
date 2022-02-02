@@ -18,7 +18,7 @@ class PostShowComments extends React.Component {
         return (
             <div id="comment-container">
                 <ul id="post-show-comments-list">
-                    {this.props.comments.map(comment => <PostShowCommentsItem key={comment.id} comment={comment} currentUserId={this.state.user_id} deleteComment={this.props.deleteComment} />)}
+                    {this.props.comments.map(comment => <PostShowCommentsItem key={comment.id} comment={comment} currentUserId={this.state.user_id} deleteComment={this.props.deleteComment} calculateCommentTime={this.props.calculateCommentTime} />)}
                 </ul>
             </div>
         )
