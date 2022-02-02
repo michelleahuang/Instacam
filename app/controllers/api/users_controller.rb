@@ -31,6 +31,11 @@ class Api::UsersController < ApplicationController
         end
     end 
 
+    def search 
+        puts "search successful"
+        debugger 
+    end 
+
     private 
 
     def user_params 
