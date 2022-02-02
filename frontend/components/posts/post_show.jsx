@@ -139,7 +139,7 @@ class PostShow extends React.Component {
                                 </div>
                             </div>
                             <div id="post-comments-box">
-                                <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id} calculateCommentTime={this.calculateCommentTime} />
+                                <PostShowCommentsContainer post={this.props.post} postId={this.props.post.id} calculateCommentTime={this.calculateCommentTime} closeModal={this.props.closeModal}/>
                             </div>
                         </div>
                         <div>

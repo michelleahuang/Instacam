@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchAllComments, createComment, deleteComment } from '../../actions/comment_actions';
+import { closeModal } from '../../actions/modal_actions'
 import PostShowComments from './post_show_comments';
 
 const mapStateToProps = (state, ownProps) => {
@@ -18,7 +19,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         fetchAllComments: () => dispatch(fetchAllComments()),
         createComment: (comment) => dispatch(createComment(comment)),
-        deleteComment: (commentId) => dispatch(deleteComment(commentId))
+        deleteComment: (commentId) => dispatch(deleteComment(commentId)),
+        closeModal: () => dispatch(closeModal())
     };
 }
 
