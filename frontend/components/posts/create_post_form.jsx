@@ -74,7 +74,6 @@ class CreatePostForm extends React.Component {
         }
     }
 
-
     render() {
         let preview;
 
