@@ -27,7 +27,7 @@ class PostsIndex extends React.Component {
                                 <ul id="entire-post">
                                     {this.props.posts.slice(0).reverse().map(post => <PostIndexItem key={post.id} post={post} openModal={this.props.openModal} /> )}
                                 </ul>
-                            </div>
+                            </div> 
                         </div>
                         <div id="right-side">
                             <UserIndexContainer />
