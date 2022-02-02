@@ -37,6 +37,8 @@
     border: 1px solid rgb(219, 219, 219);
     border-radius: 3px;
     background-color: white;
+    display: flex;
+    align-items: center;
 }
 
 #posts-body-container {
@@ -101,6 +103,7 @@
     position: sticky;
     align-self: flex-start;
     top: 60px;
+    min-width: 200px;
 }
 
 #post-likes-comments-container {

@@ -1,4 +1,5 @@
 import React from 'react';
+import UserStoriesItem from './user_stories_item';
 
 class UserStories extends React.Component {
     constructor(props) {
@@ -7,9 +8,9 @@ class UserStories extends React.Component {
 
     render() {
         return (
-            <div>
-                Hi
-            </div>
+            <ul id="user-index-stories-container">
+                {this.props.users.map((user, idx) => <UserStoriesItem key={idx} user={user} />)}
+            </ul>
         )
     }
 }
