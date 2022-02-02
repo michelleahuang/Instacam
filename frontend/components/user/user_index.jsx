@@ -12,6 +12,8 @@ class UserIndex extends React.Component {
     }
 
     render() {
+        let focusedUsers = this.props.users.slice(3, 8);
+
         return (
             <div id="right-side-container">
                 <div id="current-user-container">
@@ -35,7 +37,7 @@ class UserIndex extends React.Component {
                 <div id="right-bottom-container">
                     <p id="suggestion">Suggestions For You</p>
                     <ul>
-                        {this.props.users.map(user => <UserIndexItem key={user.id} user={user} />) }
+                        {focusedUsers.reverse().map(user => <UserIndexItem key={user.id} user={user} />) }
                     </ul>
                 </div>
             
