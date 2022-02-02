@@ -39,6 +39,23 @@ class UserIndex extends React.Component {
                     <ul>
                         {focusedUsers.reverse().map(user => <UserIndexItem key={user.id} user={user} />) }
                     </ul>
+                        <div id="user-index-footer">
+                            <ul id="user-index-footer-links">
+                                <li>
+                                    <a className="index-links" href="mailto:michelleahuang@berkeley.edu?subject=Let's Connect!">Contact ·</a>
+                                </li>
+                                <li>
+                                    <a className="index-links" href="https://github.com/michelleahuang" target="_blank">GitHub ·</a>
+                                </li>
+                                <li>
+                                    <a className="index-links" href="https://www.linkedin.com/in/michelleahuang/" target="_blank">LinkedIn ·</a>
+                                </li>
+                                <li>
+                                    <a className="index-links" href="#" target="_blank">AngelList</a>
+                                </li>
+                            </ul>
+                            <p>© 2022 INSTACAM BY MICHELLE HUANG</p>
+                    </div>
                 </div>
             
 
