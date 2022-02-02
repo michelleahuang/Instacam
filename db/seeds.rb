@@ -182,7 +182,7 @@ hailey_post4_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/
 hailey_post4.photo.attach(io: hailey_post4_photo, filename: 'hubby.jpg')
 hailey_post4.save
 
-simu_post1 = Post.new({user_id: simu.id, caption: "Feeling so blessed... WOW. Shang Chi out in theaters now!"})
+simu_post1 = Post.new({user_id: simu.id, caption: "Feeling so blessed... WOW!! Shang Chi out in theaters now!"})
 simu_post1_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/theater.jpg')
 simu_post1.photo.attach(io: simu_post1_photo, filename: 'theater.jpg')
 simu_post1.save
