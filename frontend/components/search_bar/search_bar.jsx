@@ -5,11 +5,14 @@ class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            searchParams: '',
             searchedUsersArray: []
         }
 
         this.handleFilter = this.handleFilter.bind(this);
         this.handleClick = this.handleClick.bind(this);
+
+        this.updateSearchParams = this.updateSearchParams.bind(this);
     }
 
     handleFilter(e) {
@@ -23,6 +26,10 @@ class SearchBar extends React.Component {
         } else {
             this.setState({ searchedUsersArray: newFilter });
         }
+    }
+
+    updateSearchParams() {
+        this.setState({ searchParams: e.currentTarget.value })
     }
 
     handleClick() {
