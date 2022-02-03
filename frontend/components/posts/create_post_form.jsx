@@ -12,6 +12,7 @@ class CreatePostForm extends React.Component {
             photoFile: null,
             photoUrl: null
         };
+
         this.handleInput = this.handleInput.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleFile = this.handleFile.bind(this);
@@ -38,7 +39,7 @@ class CreatePostForm extends React.Component {
         fileReader.onloadend = () => {
             this.setState({photoFile: file, photoUrl: fileReader.result});
         };
-
+        debugger
         if (file) {
             fileReader.readAsDataURL(file);
         };
