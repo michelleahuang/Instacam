@@ -6,33 +6,54 @@ class SearchBar extends React.Component {
         super(props);
         this.state = {
             searchParams: '',
-            searchedUsersArray: [],
-            hidden: true 
+            searchedUsersArray: []
         }
 
         this.handleFilter = this.handleFilter.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.updateSearchParams = this.updateSearchParams.bind(this);
         this.clearInput = this.clearInput.bind(this);
-        this.handleToggle = this.handleToggle.bind(this);
+        this.showElement = this.showElement.bind(this);
     }
 
-    handleToggle(e) {
-        this.setState({ hidden: !this.state.hidden})
+    showElement() {
+        if (document.querySelector('.data-result-wrapper')) {
+            // document.querySelector('.data-result').style.display = "block";
+            document.querySelector('.data-result-wrapper').style.display = "flex";
+        }
+        document.querySelector('.data-result').style.display = "block";
     }
+
 
     handleFilter(e) {
+
         this.setState({searchParams: e.currentTarget.value})
         const searchWord = e.currentTarget.value;
         const newFilter = this.props.users.filter((user) => {
             return user.username.toLowerCase().includes(searchWord.toLowerCase());
         });
 
+        console.log(newFilter);
+
         if (searchWord === "") {
             this.setState({ searchedUsersArray: []})
         } else {
-            this.setState({ searchedUsersArray: newFilter });
+            this.setState({ searchedUsersArray: newFilter } , () => {this.showElement()});
         }
+
+        // this.showElement()
+
+
+        // this.props.users.filter((user) => {
+        //     return user.username.toLowerCase().includes(searchWord.toLowerCase());
+        // }).then(newFilter => { 
+        //     if (searchWord === "") {
+        //         this.setState({ searchedUsersArray: []})
+        //     } else {
+        //         console.log(this.state.searchedUsersArray);
+        //         this.setState({ searchedUsersArray: newFilter }, this.showElement());
+        //     }
+        // })
     }
 
     updateSearchParams() {
@@ -43,12 +64,16 @@ class SearchBar extends React.Component {
         this.setState({ searchedUsersArray: [] });
         this.setState({ searchParams: '' });
         document.getElementById("search-bar-input").value= "";
+        // document.querySelector('.data-result').style.display = "none";
+        // document.querySelector('.data-result-wrapper').style.display = "none";
     }
 
     clearInput() {
         this.setState({ searchedUsersArray: [] });
         this.setState({ searchParams: '' });
         document.getElementById("search-bar-input").value= "";
+        // document.querySelector('.data-result').style.display = "none";
+        // document.querySelector('.data-result-wrapper').style.display = "none";
     }
 
 
@@ -83,15 +108,24 @@ class SearchBar extends React.Component {
                     :
                         <img id="search-close-icon" onClick={this.clearInput} src={searchCloseButton} alt="closeButton"></img>
                     }
-                    <input id="search-bar-input" type="text" placeholder="Search" onFocus={this.handleToggle} onChange={this.handleFilter}></input>
+                    <input id="search-bar-input" type="text" placeholder="Search" onChange={this.handleFilter}></input>
+                    
+                    <div className="data-result">
+                        {this.state.searchParams.length !== 0 && (
+                            <div className="data-result-wrapper">
+                                {display}
+                            </div>
+                        )}
+                    </div> 
+
                 </div>
-                <div className={this.state.hidden ? "data-result": "data-result active"}>
+                {/* <div className="data-result">
                     {this.state.searchParams.length !== 0 && (
-                        <div className={this.state.hidden ? "data-result-wrapper": "data-result-wrapper active"}>
+                        <div className="data-result-wrapper">
                             {display}
                         </div>
                     )}
-                </div> 
+                </div>  */}
             </div>
         )
     }

@@ -190,7 +190,11 @@ simu_post1.save
 
 Like.destroy_all
 
+
 like1 = Like.create!(user_id: demo.id, post_id: hailey_post1.id)
+
+
+Like.create!(user_id: demo.id, post_id: hailey_post1.id)
 like2 = Like.create!(user_id: demo.id, post_id: hailey_post2.id)
 like3 = Like.create!(user_id: cynthia.id, post_id: hailey_post1.id)
 
