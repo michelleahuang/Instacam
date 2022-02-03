@@ -18,7 +18,6 @@ class SearchBar extends React.Component {
 
     showElement() {
         if (document.querySelector('.data-result-wrapper')) {
-            // document.querySelector('.data-result').style.display = "block";
             document.querySelector('.data-result-wrapper').style.display = "flex";
         }
         document.querySelector('.data-result').style.display = "block";
@@ -41,19 +40,6 @@ class SearchBar extends React.Component {
             this.setState({ searchedUsersArray: newFilter } , () => {this.showElement()});
         }
 
-        // this.showElement()
-
-
-        // this.props.users.filter((user) => {
-        //     return user.username.toLowerCase().includes(searchWord.toLowerCase());
-        // }).then(newFilter => { 
-        //     if (searchWord === "") {
-        //         this.setState({ searchedUsersArray: []})
-        //     } else {
-        //         console.log(this.state.searchedUsersArray);
-        //         this.setState({ searchedUsersArray: newFilter }, this.showElement());
-        //     }
-        // })
     }
 
     updateSearchParams() {
@@ -64,16 +50,16 @@ class SearchBar extends React.Component {
         this.setState({ searchedUsersArray: [] });
         this.setState({ searchParams: '' });
         document.getElementById("search-bar-input").value= "";
-        // document.querySelector('.data-result').style.display = "none";
-        // document.querySelector('.data-result-wrapper').style.display = "none";
+        document.querySelector('.data-result').style.display = "none";
+        document.querySelector('.data-result-wrapper').style.display = "none";
     }
 
     clearInput() {
         this.setState({ searchedUsersArray: [] });
         this.setState({ searchParams: '' });
         document.getElementById("search-bar-input").value= "";
-        // document.querySelector('.data-result').style.display = "none";
-        // document.querySelector('.data-result-wrapper').style.display = "none";
+        document.querySelector('.data-result').style.display = "none";
+        document.querySelector('.data-result-wrapper').style.display = "none";
     }
 
 
