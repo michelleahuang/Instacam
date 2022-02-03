@@ -6,13 +6,19 @@ class SearchBar extends React.Component {
         super(props);
         this.state = {
             searchParams: '',
-            searchedUsersArray: []
+            searchedUsersArray: [],
+            hidden: true 
         }
 
         this.handleFilter = this.handleFilter.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.updateSearchParams = this.updateSearchParams.bind(this);
         this.clearInput = this.clearInput.bind(this);
+        this.handleToggle = this.handleToggle.bind(this);
+    }
+
+    handleToggle(e) {
+        this.setState({ hidden: !this.state.hidden})
     }
 
     handleFilter(e) {
@@ -53,18 +59,18 @@ class SearchBar extends React.Component {
             display = this.state.searchedUsersArray.slice(0,5).map(user => {
                 return (
                     <Link onClick={this.handleClick} to={`/users/${user.id}`} className="link" key={user.id}>
-                        <div key={user.id} id="data-item">
-                            <img id="search-bar-image" src={user.photoUrl}></img>
-                            <div id="search-bar-usernames-info">
-                                <p id="search-bar-username">{user.username}</p>
-                                <p id="search-bar-name">{user.name}</p>
+                        <div key={user.id} className="data-item">
+                            <img className="search-bar-image" src={user.photoUrl}></img>
+                            <div className="search-bar-usernames-info">
+                                <p className="search-bar-username">{user.username}</p>
+                                <p className="search-bar-name">{user.name}</p>
                             </div>
                         </div>
                     </Link>
                 )
             })
         } else if (this.state.searchedUsersArray.length === 0 || this.state.searchWOrd !== "") {
-            let temporary = () => { return ( <p id="no-results-found">No results found.</p> )}
+            let temporary = () => { return ( <p className="no-results-found">No results found.</p> )}
             display = temporary();
         }
 
@@ -77,24 +83,11 @@ class SearchBar extends React.Component {
                     :
                         <img id="search-close-icon" onClick={this.clearInput} src={searchCloseButton} alt="closeButton"></img>
                     }
-                    <input id="search-bar-input" type="text" placeholder="Search" onChange={this.handleFilter}></input>
+                    <input id="search-bar-input" type="text" placeholder="Search" onFocus={this.handleToggle} onChange={this.handleFilter}></input>
                 </div>
-                <div id="data-result">
+                <div className={this.state.hidden ? "data-result": "data-result active"}>
                     {this.state.searchParams.length !== 0 && (
-                        <div id="data-result-wrapper">
-                            {/* {this.state.searchedUsersArray.slice(0,6).map(user => {
-                                return (
-                                <Link onClick={this.handleClick} to={`/users/${user.id}`} className="link" key={user.id}>
-                                    <div key={user.id} id="data-item">
-                                        <img id="search-bar-image" src={user.photoUrl}></img>
-                                        <div id="search-bar-usernames-info">
-                                            <p id="search-bar-username">{user.username}</p>
-                                            <p id="search-bar-name">{user.name}</p>
-                                        </div>
-                                    </div>
-                                </Link>
-                                )
-                            })} */}
+                        <div className={this.state.hidden ? "data-result-wrapper": "data-result-wrapper active"}>
                             {display}
                         </div>
                     )}
