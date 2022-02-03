@@ -23,6 +23,7 @@
     font-weight: 300;
     font-size: 16px;
     color: rgb(142, 142, 142);
+    position: relative;
 }
 
 #search-bar-input:focus {
@@ -33,4 +34,60 @@
     color: rgb(38, 38, 38);
 }
 
+#data-result {
+    z-index: 3;
+    width: 375px;
+    height: 380px;
+    position: absolute;
+    top: 60px;
+    transform: translate(-15%);
+    border-radius: 6px;
+}
+
+#data-result-wrapper {
+    padding-top: 12px;
+    background-color: white;
+    border-radius: 6px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 3px 1px rgb(219, 219, 219);
+}
+
+#data-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+#data-item:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+#search-bar-image {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-left: 16px;
+}
+
+#search-bar-usernames-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+    font-size: 14px;
+}
+
+#search-bar-username {
+    color: rgb(38, 38, 38);
+    font-weight: 600;
+}
+
+#search-bar-name {
+    color: rgb(142, 142, 142);
+    margin-top: 3px;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
 
