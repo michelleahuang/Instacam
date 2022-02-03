@@ -20,12 +20,12 @@ class SearchBar extends React.Component {
         if (document.querySelector('.data-result-wrapper')) {
             document.querySelector('.data-result-wrapper').style.display = "flex";
         }
+        
         document.querySelector('.data-result').style.display = "block";
     }
 
 
     handleFilter(e) {
-
         this.setState({searchParams: e.currentTarget.value})
         const searchWord = e.currentTarget.value;
         const newFilter = this.props.users.filter((user) => {
@@ -39,7 +39,6 @@ class SearchBar extends React.Component {
         } else {
             this.setState({ searchedUsersArray: newFilter } , () => {this.showElement()});
         }
-
     }
 
     updateSearchParams() {
