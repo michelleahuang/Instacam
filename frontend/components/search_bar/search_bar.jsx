@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
         if (document.querySelector('.data-result-wrapper')) {
             document.querySelector('.data-result-wrapper').style.display = "flex";
         }
-        
+
         document.querySelector('.data-result').style.display = "block";
     }
 
@@ -32,12 +32,10 @@ class SearchBar extends React.Component {
             return user.username.toLowerCase().includes(searchWord.toLowerCase());
         });
 
-        console.log(newFilter);
-
         if (searchWord === "") {
             this.setState({ searchedUsersArray: []})
         } else {
-            this.setState({ searchedUsersArray: newFilter } , () => {this.showElement()});
+            this.setState({ searchedUsersArray: newFilter }, () => {this.showElement()});
         }
     }
 
@@ -79,7 +77,7 @@ class SearchBar extends React.Component {
                     </Link>
                 )
             })
-        } else if (this.state.searchedUsersArray.length === 0 || this.state.searchWOrd !== "") {
+        } else if (this.state.searchedUsersArray.length === 0 || this.state.searchParams !== "") {
             let temporary = () => { return ( <p className="no-results-found">No results found.</p> )}
             display = temporary();
         }
@@ -104,13 +102,6 @@ class SearchBar extends React.Component {
                     </div> 
 
                 </div>
-                {/* <div className="data-result">
-                    {this.state.searchParams.length !== 0 && (
-                        <div className="data-result-wrapper">
-                            {display}
-                        </div>
-                    )}
-                </div>  */}
             </div>
         )
     }
