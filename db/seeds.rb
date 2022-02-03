@@ -72,7 +72,7 @@ demo_post4_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/pi
 demo_post4.photo.attach(io: demo_post4_photo, filename: 'picnic.jpg')
 demo_post4.save
 
-demo_post5 = Post.new({user_id: demo.id, caption: "HAPPY BIRTHDAY ANNIE!! To another 10 years of friendship 🥳🎉"})
+demo_post5 = Post.new({user_id: demo.id, caption: "HAPPY BDAY ANNIE!! To another 10 years of friendship 🥳🎉"})
 demo_post5_photo = open('https://aa-instacam-seeds.s3.us-west-1.amazonaws.com/birthday.jpg')
 demo_post5.photo.attach(io: demo_post5_photo, filename: 'birthday.jpg')
 demo_post5.save

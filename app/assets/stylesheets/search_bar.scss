@@ -64,6 +64,7 @@
     height: 100%;
     width: 100%;
     box-shadow: 0 0 3px 1px rgb(219, 219, 219);
+    display: flex;
 
 }
 
@@ -106,3 +107,8 @@
     font-weight: 400;
 }
 
+#no-results-found {
+    margin: auto auto;
+    color: rgb(142, 142, 142);
+    font-size: 14px;
+}

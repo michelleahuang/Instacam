@@ -16,6 +16,8 @@ class SearchBar extends React.Component {
     }
 
     handleFilter(e) {
+        this.setState({searchParams: e.currentTarget.value})
+        // const searchWord = this.state.searchParams;
         const searchWord = e.currentTarget.value;
         const newFilter = this.props.users.filter((user) => {
             return user.username.toLowerCase().includes(searchWord.toLowerCase());
@@ -55,8 +57,9 @@ class SearchBar extends React.Component {
                     </Link>
                 )
             })
-        } else if (this.state.searchedUsersArray.length === 0) {
-            display = <div>No users found.</div>
+        } else if (this.state.searchedUsersArray.length === 0 || this.state.searchWOrd !== "") {
+            let temporary = () => { return ( <p id="no-results-found">No results found.</p> )}
+            display = temporary();
         }
 
 
@@ -71,7 +74,7 @@ class SearchBar extends React.Component {
                     <input id="search-bar-input" type="text" placeholder="Search" onChange={this.handleFilter}></input>
                 </div>
                 <div id="data-result">
-                    {this.state.searchedUsersArray.length !== 0 && (
+                    {this.state.searchParams.length !== 0 && (
                         <div id="data-result-wrapper">
                             {/* {this.state.searchedUsersArray.slice(0,6).map(user => {
                                 return (
