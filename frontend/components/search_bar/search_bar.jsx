@@ -67,7 +67,7 @@ class SearchBar extends React.Component {
         let display;
 
         if (this.state.searchedUsersArray.length !== 0) {
-            display = this.state.searchedUsersArray.slice(0,5).map(user => {
+            display = this.state.searchedUsersArray.slice(0,6).map(user => {
                 return (
                     <Link onClick={this.handleClick} to={`/users/${user.id}`} className="link" key={user.id}>
                         <div key={user.id} className="data-item">
