@@ -12,6 +12,7 @@ class SearchBar extends React.Component {
         this.handleFilter = this.handleFilter.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.updateSearchParams = this.updateSearchParams.bind(this);
+        this.clearInput = this.clearInput.bind(this);
     }
 
     handleFilter(e) {
@@ -33,6 +34,12 @@ class SearchBar extends React.Component {
     }
 
     handleClick() {
+        this.setState({ searchedUsersArray: [] });
+        this.setState({ searchParams: '' });
+        document.getElementById("search-bar-input").value= "";
+    }
+
+    clearInput() {
         this.setState({ searchedUsersArray: [] });
         this.setState({ searchParams: '' });
         document.getElementById("search-bar-input").value= "";
@@ -68,7 +75,7 @@ class SearchBar extends React.Component {
                     {this.state.searchParams.length === 0 ?
                         <svg id="search-icon" aria-label="Search" className="_8-yf5 " color="#8e8e8e" fill="#8e8e8e" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M19 10.5A8.5 8.5 0 1110.5 2a8.5 8.5 0 018.5 8.5z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="16.511" x2="22" y1="16.511" y2="22"></line></svg>
                     :
-                        <img id="search-close-icon" src={searchCloseButton} alt="closeButton"></img>
+                        <img id="search-close-icon" onClick={this.clearInput} src={searchCloseButton} alt="closeButton"></img>
                     }
                     <input id="search-bar-input" type="text" placeholder="Search" onChange={this.handleFilter}></input>
                 </div>
