@@ -34,6 +34,8 @@ class SearchBar extends React.Component {
 
         if (searchWord === "") {
             this.setState({ searchedUsersArray: []})
+            document.querySelector('.data-result').style.display = "none";
+            document.querySelector('.data-result-wrapper').style.display = "none";
         } else {
             this.setState({ searchedUsersArray: newFilter }, () => {this.showElement()});
         }
@@ -100,7 +102,7 @@ class SearchBar extends React.Component {
                             </div>
                         )}
                     </div> 
-
+                    {this.state.searchParams.length === 0}
                 </div>
             </div>
         )
