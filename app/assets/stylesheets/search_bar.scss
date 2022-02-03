@@ -34,23 +34,37 @@
     color: rgb(38, 38, 38);
 }
 
+// #search-bar-input:active #data-result{
+//     display: block
+// }
+
 #data-result {
-    z-index: 3;
+    // z-index: -100;
     width: 375px;
-    height: 380px;
+    height: 370px;
     position: absolute;
     top: 60px;
     transform: translate(-15%);
     border-radius: 6px;
+    background-color: yellow;
+    // display: none;
+}
+
+
+#dataResult::-webkit-scrollbar {
+    display: none;
 }
 
 #data-result-wrapper {
     padding-top: 12px;
-    background-color: white;
+    // background-color: white;
+    background-color: yellow;
+
     border-radius: 6px;
     height: 100%;
     width: 100%;
     box-shadow: 0 0 3px 1px rgb(219, 219, 219);
+
 }
 
 #data-item {
