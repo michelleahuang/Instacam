@@ -290,7 +290,7 @@ like69 = Like.create!(user_id: simu.id, post_id: hailey_post1.id)
 
 like70 = Like.create!(user_id: max.id, post_id: hailey_post2.id)
 like71 = Like.create!(user_id: cynthia.id, post_id: hailey_post2.id)
-like72 = Like.create!(user_id: aspyn.id, post_id: hailey_post2.id)
+like72 = Like.create!(user_id: demo.id, post_id: hailey_post2.id)
 like73 = Like.create!(user_id: taylor.id, post_id: hailey_post2.id)
 
 like74 = Like.create!(user_id: demo.id, post_id: hailey_post3.id)

@@ -29,25 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // TESTING START
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
+    // window.signup = signup;
+    // window.login = login;
+    // window.logout = logout;
 
-    window.fetchAllPosts = fetchAllPosts;
-    window.fetchPost = fetchPost;
-    window.createPost = createPost;
-    window.updatePost = updatePost;
-    window.deletePost = deletePost;
+    // window.fetchAllPosts = fetchAllPosts;
+    // window.fetchPost = fetchPost;
+    // window.createPost = createPost;
+    // window.updatePost = updatePost;
+    // window.deletePost = deletePost;
 
-    window.fetchAllLikes = fetchAllLikes;
-    window.createLike = createLike;
-    window.deleteLike = deleteLike;
+    // window.fetchAllLikes = fetchAllLikes;
+    // window.createLike = createLike;
+    // window.deleteLike = deleteLike;
 
-    window.fetchAllComments = fetchAllComments;
-    window.createComment = createComment;
-    window.deleteComment = deleteComment;
+    // window.fetchAllComments = fetchAllComments;
+    // window.createComment = createComment;
+    // window.deleteComment = deleteComment;
     
-    window.store = store;
+    // window.store = store;
     // TESTING END
 
     const root = document.getElementById("root");
