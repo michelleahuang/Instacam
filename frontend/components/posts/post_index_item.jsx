@@ -81,10 +81,12 @@ class PostIndexItem extends React.Component {
                     <div id="post-likes-comments-container">
                         <PostIndexLikesContainer post={this.props.post} postId={postId} />
                         <div id="post-caption">
-                            <Link to={`/users/${this.props.post.userId}`} className="link">
+                            {/* <Link to={`/users/${this.props.post.userId}`} className="link">
                                 <p id="post-caption-username">{this.props.post.creator}</p>
                             </Link>
-                            <p id="post-caption-body">{this.props.post.caption}</p>
+                            <p id="post-caption-body">{this.props.post.caption}</p> */}
+
+                            <p id="post-caption-body"><Link to={`/users/${this.props.post.userId}`} className="link"><span id="post-caption-username">{this.props.post.creator}</span></Link>{this.props.post.caption}</p>
                         </div>
                         <CommentsIndexContainer post={this.props.post} postId={postId} />
                         <p className="post-time">{this.calculateTime(this.props.post.createdAt)} AGO</p>

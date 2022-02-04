@@ -24,10 +24,7 @@ class CommentsIndexItem extends React.Component {
         return (
             <li id="comments-item-container">
                 <div id="comments-body-item-container">
-                    <Link to={`/users/${this.props.comment.userId}`} className="link">
-                        <p id="comment-username">{this.props.comment.username}</p>
-                    </Link>
-                    <p id="comment-body">{this.props.comment.body}</p>
+                    <p id="comment-body"><Link to={`/users/${this.props.comment.userId}`} className="link"><span id="comment-username">{this.props.comment.username}</span></Link>{this.props.comment.body}</p>
                 </div>
                     {this.handleDelete()}
             </li>

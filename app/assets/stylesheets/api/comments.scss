@@ -27,7 +27,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // margin-bottom: 5px;
 }
+
+#comment-body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 200px;
+}
+
 
 #comments-body-item-container {
     display: flex;
