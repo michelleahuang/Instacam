@@ -190,16 +190,80 @@ simu_post1.save
 
 Like.destroy_all
 
+like1 = Like.create!(user_id: max.id, post_id: demo_post1.id)
+like2 = Like.create!(user_id: cynthia.id, post_id: demo_post1.id)
+like3 = Like.create!(user_id: josh.id, post_id: demo_post1.id)
 
-like1 = Like.create!(user_id: demo.id, post_id: hailey_post1.id)
+like4 = Like.create!(user_id: max.id, post_id: demo_post2.id)
+like5 = Like.create!(user_id: cynthia.id, post_id: demo_post2.id)
+like6 = Like.create!(user_id: josh.id, post_id: demo_post2.id)
+
+like7 = Like.create!(user_id: max.id, post_id: demo_post3.id)
+like8 = Like.create!(user_id: cynthia.id, post_id: demo_post3.id)
+like9 = Like.create!(user_id: josh.id, post_id: demo_post3.id)
+
+like10 = Like.create!(user_id: max.id, post_id: demo_post4.id)
+like11 = Like.create!(user_id: cynthia.id, post_id: demo_post4.id)
+like12 = Like.create!(user_id: josh.id, post_id: demo_post4.id)
+like13 = Like.create!(user_id: aspyn.id, post_id: demo_post4.id)
+
+like14 = Like.create!(user_id: max.id, post_id: demo_post5.id)
+like15 = Like.create!(user_id: cynthia.id, post_id: demo_post5.id)
+like16 = Like.create!(user_id: josh.id, post_id: demo_post5.id)
+like17 = Like.create!(user_id: aspyn.id, post_id: demo_post5.id)
+
+like18 = Like.create!(user_id: demo.id, post_id: max_post1.id)
+like19 = Like.create!(user_id: josh.id, post_id: max_post1.id)
+like20 = Like.create!(user_id: cynthia.id, post_id: max_post1.id)
+
+like21 = Like.create!(user_id: demo.id, post_id: max_post2.id)
+like22 = Like.create!(user_id: josh.id, post_id: max_post2.id)
+like23 = Like.create!(user_id: cynthia.id, post_id: max_post2.id)
+like24 = Like.create!(user_id: simu.id, post_id: max_post2.id)
+
+like25 = Like.create!(user_id: josh.id, post_id: max_post3.id)
+like26 = Like.create!(user_id: cynthia.id, post_id: max_post3.id)
+
+like27 = Like.create!(user_id: demo.id, post_id: cynthia_post1.id)
+like28 = Like.create!(user_id: max.id, post_id: cynthia_post1.id)
+like29 = Like.create!(user_id: aspyn.id, post_id: cynthia_post1.id)
+like30 = Like.create!(user_id: josh.id, post_id: cynthia_post1.id)
+
+like31 = Like.create!(user_id: max.id, post_id: cynthia_post2.id)
+
+like32 = Like.create!(user_id: aspyn.id, post_id: cynthia_post3.id)
+like33 = Like.create!(user_id: josh.id, post_id: cynthia_post3.id)
 
 
-Like.create!(user_id: demo.id, post_id: hailey_post1.id)
-like2 = Like.create!(user_id: demo.id, post_id: hailey_post2.id)
-like3 = Like.create!(user_id: cynthia.id, post_id: hailey_post1.id)
 
+Comment.destroy_all 
+comment1 = Comment.create!(user_id: max.id, post_id: demo_post1.id, body: "Unreal! View looks great 😍")
 
-Comment.destroy_all
-comment1 = Comment.create!(user_id: demo.id, post_id: hailey_post1.id, body: "So cool!")
-comment2 = Comment.create!(user_id: demo.id, post_id: hailey_post2.id, body: "Amazing!")
-comment3 = Comment.create!(user_id: cynthia.id, post_id: hailey_post1.id, body: "Fab!")
+comment2 = Comment.create!(user_id: max.id, post_id: demo_post2.id, body: "Very cute.")
+comment3 = Comment.create!(user_id: cynthia.id, post_id: demo_post2.id, body: "The little bits of snow on her nose 😩🤍")
+comment4 = Comment.create!(user_id: josh.id, post_id: demo_post2.id, body: "So smol")
+
+comment5 = Comment.create!(user_id: max.id, post_id: demo_post4.id, body: "Looks like lots of fun! Today was a great day for a picnic.")
+comment6 = Comment.create!(user_id: cynthia.id, post_id: demo_post4.id, body: "SO AESTHETIC! I need to do this with my friends too!")
+
+comment7 = Comment.create!(user_id: max.id, post_id: demo_post5.id, body: "Happy birthday Annie!🎊")
+comment8 = Comment.create!(user_id: cynthia.id, post_id: demo_post5.id, body: "Best friends forever!")
+comment9 = Comment.create!(user_id: aspyn.id, post_id: demo_post5.id, body: "Hope you guys love the cake!")
+
+comment10 = Comment.create!(user_id: demo.id, post_id: max_post1.id, body: "Wow, looks like a relaxing time!")
+comment11 = Comment.create!(user_id: josh.id, post_id: max_post1.id, body: "I've hiked this trail before.. it's one of my favorites!")
+
+comment12 = Comment.create!(user_id: demo.id, post_id: max_post2.id, body: "The food there is the best!")
+comment13 = Comment.create!(user_id: cynthia.id, post_id: max_post2.id, body: "Taiwan is next on my list to visit ✈️")
+comment14 = Comment.create!(user_id: josh.id, post_id: max_post2.id, body: "Such a good shot!")
+
+comment15 = Comment.create!(user_id: demo.id, post_id: max_post3.id, body: "☕")
+comment16 = Comment.create!(user_id: josh.id, post_id: max_post3.id, body: "One of my favorite coffee shops!")
+
+comment17 = Comment.create!(user_id: demo.id, post_id: cynthia_post1.id, body: "LOVE BOBA")
+comment18 = Comment.create!(user_id: max.id, post_id: cynthia_post1.id, body: "Did you know they started in Taiwan?")
+comment19 = Comment.create!(user_id: aspyn.id, post_id: cynthia_post1.id, body: "I need to try!")
+
+comment20 = Comment.create!(user_id: demo.id, post_id: cynthia_post3.id, body: "Second!")
+comment21 = Comment.create!(user_id: max.id, post_id: cynthia_post3.id, body: "Looks delicious.")
+comment22 = Comment.create!(user_id: josh.id, post_id: cynthia_post3.id, body: "Ooo, I have to try next time...")
