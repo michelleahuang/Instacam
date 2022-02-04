@@ -1,24 +1,27 @@
-# README
+# Instacam
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Instacam](https://the-instacam.herokuapp.com/#/login) is a full stack web application clone of Instagram where users can publicly share photos that can be viewed, liked by, and commented on by other users.
 
-Things you may want to cover:
+## Technologies 
+* Ruby on Rails
+* React/Redux
+* PostgreSQL
+* JavaScript
+* HTML5 / CSS
 
-* Ruby version
+## Features
+### New User Account Creation and Login
+![Login Demo](app/assets/images/readme_demo_login.gif)
 
-* System dependencies
+### Create, View, Edit, and Delete Posts
+![CRUD Post](app/assets/images/readme_create_post.gif)
 
-* Configuration
+### Like and Unlike Posts
+![Likes](app/assets/images/readme_likes.gif)
 
-* Database creation
+### Create and Delete Comments on Posts
+![Comments](app/assets/images/readme_comments.gif)
 
-* Database initialization
+### User Profile and Dashboard of All Posts
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Search for Other Users
