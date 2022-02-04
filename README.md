@@ -23,5 +23,12 @@
 ![Comments](app/assets/images/readme_comments.gif)
 
 ### User Profile and Dashboard of All Posts
+![User](app/assets/images/readme_user.gif)
 
 ### Search for Other Users
+![Search](app/assets/images/readme_search.gif)
+
+## Bonus Features
+* Users can see a list of those who liked their posts in the navigation bar
+* Users can follow other users
+* Mobile friendly
