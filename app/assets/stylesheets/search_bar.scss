@@ -46,7 +46,7 @@
     width: 375px;
     height: 370px;
     position: absolute;
-    top: 60px;
+    top: 49px;
     transform: translate(-15%);
     border-radius: 6px;
     background-color: white;
@@ -61,17 +61,17 @@
 .data-result:after {
         position: absolute;
         transform: rotate(45deg);
-        width: 15px;
-        height: 15px;
-        border-top: 1px solid rgb(219, 219, 219);
+        width: 12px;
+        height: 12px;
+        border-top: 1px solid rgb(255, 255, 255);
         border-bottom: 0px;
         border-right: 0px;
-        border-left: 1px solid rgb(219, 219, 219);
-        top: -20px;
+        border-left: 1px solid rgb(255, 255, 255);
+        top: -17px;
         right: 175px;
         margin-top: 11px;
         content: '';
-        box-shadow: -1px -1px 2px 0px rgb(219, 219, 219);
+        box-shadow: -1px -2px 2px 0px rgb(219, 219, 219);
         background-color: white;
 }
 
