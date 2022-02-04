@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class CommentsIndexItem extends React.Component {
     constructor(props) {
@@ -23,8 +24,9 @@ class CommentsIndexItem extends React.Component {
         return (
             <li id="comments-item-container">
                 <div id="comments-body-item-container">
-                    
-                    <p id="comment-username">{this.props.comment.username}</p>
+                    <Link to={`/users/${this.props.comment.userId}`} className="link">
+                        <p id="comment-username">{this.props.comment.username}</p>
+                    </Link>
                     <p id="comment-body">{this.props.comment.body}</p>
                 </div>
                     {this.handleDelete()}

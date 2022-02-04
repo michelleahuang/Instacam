@@ -91,7 +91,7 @@ class SignupSessionForm extends React.Component {
                             </form>
                             {this.renderErrors()}
                         </div>
-                        <div className="panel-box" id="other-form">
+                        <div className="panel-box" id="signup-other-form">
                             <p>Have an account? <Link className="other-form-link" to='/login'>Log In</Link></p>                     
                         </div>
                     </div>

@@ -5,18 +5,21 @@
 #session-container {
     background-color: rgb(250, 250, 250);
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto auto;
 }
 
 #session-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin: 0 auto;
+    margin-bottom: 35px;
 }
 
 #session-box {
@@ -46,6 +49,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 35px;
+    margin-left: 25px;
 }
 
 #session-form-container h1 {
@@ -61,11 +65,14 @@
     align-items: center;
 }
 
-#other-form {
+#login-other-form {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 10px;
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .panel-box {
@@ -74,7 +81,7 @@
     padding: 20px 40px;
     // width: 350px;
     width: 250px;
-    margin-left: 25px;
+    // margin-left: 25px;
 }
 
 .input-box {
@@ -161,8 +168,9 @@
 
 footer {
     display: flex;
-    position: fixed;
-    bottom: 10px;
+    bottom: 0;
+    // position: fixed;
+    // bottom: 10px;
 }
 
 footer ul {
