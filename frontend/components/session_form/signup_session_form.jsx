@@ -104,7 +104,7 @@ class SignupSessionForm extends React.Component {
                             <a href="https://www.linkedin.com/in/michelleahuang/" target="_blank">LinkedIn</a>
                         </li>
                         <li id="angelist">
-                            <a href="#" target="_blank">AngelList</a>
+                            <a href="https://angel.co/u/michelleahuang" target="_blank">AngelList</a>
                         </li>
                     </ul>
                     <p>© 2022 Instacam by Michelle Huang</p>

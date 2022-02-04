@@ -47,7 +47,7 @@ class UserIndex extends React.Component {
                                     <a className="index-links" href="https://www.linkedin.com/in/michelleahuang/" target="_blank">LinkedIn ·</a>
                                 </li>
                                 <li>
-                                    <a className="index-links" href="#" target="_blank">AngelList</a>
+                                    <a className="index-links" href="https://angel.co/u/michelleahuang" target="_blank">AngelList</a>
                                 </li>
                             </ul>
                             <p>© 2022 INSTACAM BY MICHELLE HUANG</p>
