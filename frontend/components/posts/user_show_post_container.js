@@ -1,6 +1,9 @@
 import { connect } from 'react-redux';
 import { openModal, closeModal} from '../../actions/modal_actions';
-import { fetchUser } from '../../actions/user_actions'
+import { fetchUser } from '../../actions/user_actions';
+import { fetchPost } from '../../actions/post_actions';
+import { fetchAllLikes } from '../../actions/like_actions';
+import { fetchAllComments } from '../../actions/comment_actions';
 import UserShowPost from './user_show_post';
 
 
