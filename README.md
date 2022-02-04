@@ -4,28 +4,28 @@
 
 ## Technologies 
 * Ruby on Rails
-* React/Redux
+* React / Redux
 * PostgreSQL
 * JavaScript
 * HTML5 / CSS
 
 ## Features
-### New User Account Creation and Login
+* ### New User Account Creation and Login
 ![Login Demo](app/assets/images/readme_demo_login.gif)
 
-### Create, View, Edit, and Delete Posts
+* ### Create, View, Edit, and Delete Posts
 ![CRUD Post](app/assets/images/readme_create_post.gif)
 
-### Like and Unlike Posts
+* ### Like and Unlike Posts
 ![Likes](app/assets/images/readme_likes.gif)
 
-### Create and Delete Comments on Posts
+* ### Create and Delete Comments on Posts
 ![Comments](app/assets/images/readme_comments.gif)
 
-### User Profile and Dashboard of All Posts
+* ### User Profile and Dashboard of All Posts
 ![User](app/assets/images/readme_user.gif)
 
-### Search for Other Users
+* ### Search for Other Users
 ![Search](app/assets/images/readme_search.gif)
 
 ## Bonus Features
