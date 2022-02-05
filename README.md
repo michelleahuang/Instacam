@@ -18,7 +18,7 @@
 * ### Create, View, Edit, and Delete Posts
 ![CRUD Post](app/assets/images/readme_create_post.gif)
 
-Users are able to create a new post by uploading a photo from their computer and attaching a caption to it. Prior to sharing, users are able to preview their post's photo and caption as well. This feature is made possible with the following logic:
+Users are able to create a new post by uploading a photo from their computer and writing a caption to go alongside it. Prior to sharing, users are able to preview their post's photo and caption as well. This feature is made possible with the following logic:
 
 ```
 handleFile(e) {
