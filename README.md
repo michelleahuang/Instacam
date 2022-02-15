@@ -58,7 +58,7 @@ handleSuccessSubmit() {
 ![Likes](app/assets/images/readme_likes.gif)
 
 * ### Create and Delete Comments on Posts
-![Comments](app/assets/images/readme_comments.gif)
+![Comments](app/assets/images/readme_comments_updated.gif)
 
 * ### User Profile and Dashboard of All Posts
 ![User](app/assets/images/readme_user.gif)
