@@ -1,6 +1,5 @@
 class Comment < ApplicationRecord
     validates :user_id, :post_id, :body, presence: true
-    validates :body, length: { minimum: 1 }
 
     belongs_to :user,
         primary_key: :id, 
