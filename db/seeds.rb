@@ -361,7 +361,7 @@ comment32 = Comment.create!(user_id: taylor.id, post_id: aspyn_post3.id, body: "
 comment33 = Comment.create!(user_id: demo.id, post_id: aspyn_post3.id, body: "🤩")
 
 comment34 = Comment.create!(user_id: hailey.id, post_id: taylor_post1.id, body: "Was so good seeing you yesterday Taylor 🥰")
-comment35 = Comment.create!(user_id: demo.id, post_id: taylor_post1.id, body: "My dreams came true last night watching you in person 😭")
+comment35 = Comment.create!(user_id: demo.id, post_id: taylor_post1.id, body: "My dreams came true last night seeing you live 😭")
 comment36 = Comment.create!(user_id: cynthia.id, post_id: taylor_post1.id, body: "Hearing Love Story live was all I ever wanted")
 comment37 = Comment.create!(user_id: max.id, post_id: taylor_post1.id, body: "Great concert! My kids and I loved it!")
 
