@@ -35,7 +35,7 @@ class CommentsForm extends React.Component {
         let postButton;
 
         if (this.state.body === '') {
-            postButton = <button id="comment-post-button-disabled">Post</button>
+            postButton = <button disabled id="comment-post-button-disabled">Post</button>
         } else {
             postButton = <button id="comment-post-button">Post</button>
         }
