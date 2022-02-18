@@ -26,7 +26,9 @@ class PostShowCommentsItem extends React.Component {
             <li id="post-show-comments-item-container">
                 <div id="post-show-comments-body-item-container">
                     <div>
-                        <img className="post-profile-icon" src={this.props.comment.userAvatar}></img>
+                        <Link to={`/users/${this.props.comment.userId}`} className="link">
+                            <img className="post-profile-icon" src={this.props.comment.userAvatar} onClick={this.props.closeModal}></img>
+                        </Link>
                     </div>
                     <div id="post-show-comments-username-caption-time">
                         <div id="post-show-comments-username-caption">
