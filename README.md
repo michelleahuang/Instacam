@@ -20,7 +20,7 @@
 
 Users are able to create a new post by uploading a photo from their computer and writing a caption to go alongside it. Prior to sharing, users are able to preview their post's photo and caption as well. This feature is made possible with the following logic:
 
-```
+```javascript
 handleFile(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
@@ -67,7 +67,7 @@ handleSuccessSubmit() {
 ![Search](app/assets/images/readme_search.gif)
 
 Users are able to search for other users on Instacam through the search bar. This feature is made possible with an effective filtering function:
-```
+```javascript
 handleFilter(e) {
     this.setState({searchParams: e.currentTarget.value})
     const searchWord = e.currentTarget.value;
