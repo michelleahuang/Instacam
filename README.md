@@ -40,7 +40,7 @@ handleSubmit(e) {
     if (this.state.photoFile) {
         formData.append('post[photo]', this.state.photoFile)
     };
-    this.props.createPost(formData).then(() => this.handleSuccessSubmit()).fail(() => thissetState({errors: this.props.errors}))
+    this.props.createPost(formData).then(() => this.handleSuccessSubmit()).fail(() => this.setState({errors: this.props.errors}))
 }
 
 handleSuccessSubmit() {
