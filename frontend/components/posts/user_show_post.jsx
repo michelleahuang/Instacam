@@ -104,7 +104,7 @@ class UserShowPost extends React.Component {
             return minutes + 'm';
         };
 
-        return seconds + 's';
+        return Math.floor(seconds) + 's';
     }
 
     closePostShowModal() {
