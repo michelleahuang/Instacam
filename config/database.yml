@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: instacam_production
-  username: instacam
-  password: <%= ENV['INSTACAM_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
