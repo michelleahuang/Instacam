@@ -1,5 +1,7 @@
 json.extract! user, :id, :username, :email, :name
-json.photoUrl url_for(user.avatar)
+if user.avatar.attached?
+    json.photoUrl rails_blob_url(user.avatar)
+end 
 
 json.set! "posts" do 
     json.array! user.posts.each do |post|
