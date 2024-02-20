@@ -1,6 +1,6 @@
 # Instacam
 
-[Instacam](https://the-instacam.herokuapp.com/#/login) is a full stack web application clone of Instagram where users can publicly share photos that can be viewed, liked by, and commented on by other users.
+[Instacam](https://instacam-2a530e2bb2bd.herokuapp.com/#/login) is a full stack web application clone of Instagram where users can publicly share photos that can be viewed, liked by, and commented on by other users.
 
 ## Technologies 
 * Ruby on Rails
